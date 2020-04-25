@@ -49,3 +49,6 @@ Publish the static files in gh-pages branch
 ### Acknowledgments
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The illustrations was created with [Absurd design](https://absurd.design/).
+[Google Fonts](https://fonts.google.com/).
+[Favicon.io](https://favicon.io/favicon-generator/).
