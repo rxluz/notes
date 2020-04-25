@@ -1,8 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.scss";
+import React from 'react'
+import logo from './logo.svg'
+import './Main.scss'
 
-function App() {
+import { useSelector } from 'react-redux'
+
+const Main = () => {
+  const settings = useSelector((state) => state.settings)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,11 +20,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {settings.hello}
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Main
