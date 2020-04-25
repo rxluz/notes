@@ -53,3 +53,4 @@ The illustrations was created with [Absurd design](https://absurd.design/).
 [Google Fonts](https://fonts.google.com/).
 [Favicon.io](https://favicon.io/favicon-generator/).
 [Github pages](https://pages.github.com/).
+React
