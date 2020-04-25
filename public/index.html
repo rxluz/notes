@@ -7,14 +7,59 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="The most cool notes app that you'll see today"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <style>
+      body {
+        font-family: "Poiret One", cursive;
+      }
+
+      .loadingio-spinner-double-ring-ylohmvr29rh {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+      }
+
+      .center {
+        z-index: 1;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+      }
+
+      .no-javascript {
+        background-color: white;
+        text-align: center;
+        display: inline-block;
+        /* width: 70%; */
+        line-height: 40px;
+      }
+
+      .no-javascript img {
+        clear: both;
+        height: 350px;
+        width: auto;
+        display: block;
+        left: calc(50% - 175px);
+        position: relative;
+        margin-bottom: 50px;
+      }
+    </style>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,11 +69,144 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Taking-notes app</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <noscript>
+      <div class="center">
+        <div class="no-javascript">
+          <img src="/please-enable-javascript.png" />
+          <br />
+          You need to enable JavaScript to run this app. <br />
+          Sie müssen JavaScript aktivieren, um diese App ausführen zu können.
+          <br />
+          Debe habilitar JavaScript para ejecutar esta aplicación. <br />
+          Vous devez activer JavaScript pour exécuter cette application. <br />
+          Você precisa habilitar o JavaScript para executar este aplicativo.
+          <br />
+        </div>
+      </div>
+    </noscript>
+    <div id="root">
+      <div class="loadingio-spinner-double-ring-ylohmvr29rh">
+        <div class="ldio-m4c69xdkzro">
+          <div></div>
+          <div></div>
+          <div><div></div></div>
+          <div><div></div></div>
+        </div>
+      </div>
+      <style type="text/css">
+        @keyframes ldio-m4c69xdkzro {
+          0% {
+            transform: rotate(0);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        .ldio-m4c69xdkzro div {
+          box-sizing: border-box !important;
+        }
+        .ldio-m4c69xdkzro > div {
+          position: absolute;
+          width: 144px;
+          height: 144px;
+          top: 28px;
+          left: 28px;
+          border-radius: 50%;
+          border: 16px solid #000;
+          border-color: #868384 transparent #868384 transparent;
+          animation: ldio-m4c69xdkzro 9.090909090909092s linear infinite;
+        }
+
+        .ldio-m4c69xdkzro > div:nth-child(2),
+        .ldio-m4c69xdkzro > div:nth-child(4) {
+          width: 108px;
+          height: 108px;
+          top: 46px;
+          left: 46px;
+          animation: ldio-m4c69xdkzro 9.090909090909092s linear infinite reverse;
+        }
+        .ldio-m4c69xdkzro > div:nth-child(2) {
+          border-color: transparent #090505 transparent #090505;
+        }
+        .ldio-m4c69xdkzro > div:nth-child(3) {
+          border-color: transparent;
+        }
+        .ldio-m4c69xdkzro > div:nth-child(3) div {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          transform: rotate(45deg);
+        }
+        .ldio-m4c69xdkzro > div:nth-child(3) div:before,
+        .ldio-m4c69xdkzro > div:nth-child(3) div:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: -16px;
+          left: 48px;
+          background: #868384;
+          border-radius: 50%;
+          box-shadow: 0 128px 0 0 #868384;
+        }
+        .ldio-m4c69xdkzro > div:nth-child(3) div:after {
+          left: -16px;
+          top: 48px;
+          box-shadow: 128px 0 0 0 #868384;
+        }
+
+        .ldio-m4c69xdkzro > div:nth-child(4) {
+          border-color: transparent;
+        }
+        .ldio-m4c69xdkzro > div:nth-child(4) div {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          transform: rotate(45deg);
+        }
+        .ldio-m4c69xdkzro > div:nth-child(4) div:before,
+        .ldio-m4c69xdkzro > div:nth-child(4) div:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: -16px;
+          left: 30px;
+          background: #090505;
+          border-radius: 50%;
+          box-shadow: 0 92px 0 0 #090505;
+        }
+        .ldio-m4c69xdkzro > div:nth-child(4) div:after {
+          left: -16px;
+          top: 30px;
+          box-shadow: 92px 0 0 0 #090505;
+        }
+        .loadingio-spinner-double-ring-ylohmvr29rh {
+          width: 200px;
+          height: 200px;
+          display: inline-block;
+          overflow: hidden;
+          background: #ffffff;
+        }
+        .ldio-m4c69xdkzro {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform: translateZ(0) scale(1);
+          backface-visibility: hidden;
+          transform-origin: 0 0; /* see note above */
+        }
+        .ldio-m4c69xdkzro div {
+          box-sizing: content-box;
+        }
+        /* generated by https://loading.io/ */
+      </style>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
