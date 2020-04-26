@@ -56,17 +56,17 @@ Publish the static files in gh-pages branch, also publishes the storybook in gh-
 
 ### Acknowledgments
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-The illustrations was created with [Absurd design](https://absurd.design/).
-[Google Fonts](https://fonts.google.com/).
-[Favicon.io](https://favicon.io/favicon-generator/).
-[Github pages](https://pages.github.com/).
-[React](https://reactjs.org/).
-[Redux](https://redux.js.org/).
-[React-Redux](https://react-redux.js.org/).
-[Redux Thunk](https://github.com/reduxjs/redux-thunk).
-[Redux Router](https://reacttraining.com/react-router/web/guides/quick-start).
-[React tippy](https://www.npmjs.com/package/react-tippy).
-[Redux i18n](https://github.com/APSL/redux-i18n).
-[Redux persist](https://github.com/rt2zz/redux-persist).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
+The illustrations was created with [Absurd design](https://absurd.design/).<br />
+[Google Fonts](https://fonts.google.com/).<br />
+[Favicon.io](https://favicon.io/favicon-generator/).<br />
+[Github pages](https://pages.github.com/).<br />
+[React](https://reactjs.org/).<br />
+[Redux](https://redux.js.org/).<br />
+[React-Redux](https://react-redux.js.org/).<br />
+[Redux Thunk](https://github.com/reduxjs/redux-thunk).<br />
+[Redux Router](https://reacttraining.com/react-router/web/guides/quick-start).<br />
+[React tippy](https://www.npmjs.com/package/react-tippy).<br />
+[Redux i18n](https://github.com/APSL/redux-i18n).<br />
+[Redux persist](https://github.com/rt2zz/redux-persist).<br />
 [Storybook](https://storybook.js.org/).
