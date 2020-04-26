@@ -15,10 +15,21 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export default function configureStore(preloadedState) {
-  const middlewares = [loggerMiddleware, thunkMiddleware]
+  const middlewares = [
+    process.env.NODE_ENV === 'development' && loggerMiddleware,
+    thunkMiddleware,
+  ].filter(Boolean)
+
   const middlewareEnhancer = applyMiddleware(...middlewares)
 
-  const enhancers = [middlewareEnhancer, monitorReducersEnhancer]
+  const addReduxDevtoolsInDevMode =
+    process.env.NODE_ENV === 'development' &&
+    window.__REDUX_DEVTOOLS_EXTENSION__ &&
+    window.__REDUX_DEVTOOLS_EXTENSION__()
+
+  const enhancers = [middlewareEnhancer, monitorReducersEnhancer, addReduxDevtoolsInDevMode].filter(
+    Boolean,
+  )
   const composedEnhancers = compose(...enhancers)
 
   let store = createStore(persistedReducer, preloadedState, composedEnhancers)
