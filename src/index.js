@@ -8,7 +8,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import { translations } from 'Common/locales/translations'
 import configureStore from 'Reducers/configureStore'
-import Main from 'Modules/main'
+import Main from 'Modules/main/Main'
 
 import './index.css'
 import * as serviceWorker from './serviceWorker'
