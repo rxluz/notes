@@ -1,0 +1,29 @@
+import { applyMiddleware, compose, createStore } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+
+import monitorReducersEnhancer from 'Enhancers/monitorReducer'
+import loggerMiddleware from 'Middleware/logger'
+import rootReducer from '.'
+
+const persistConfig = {
+  key: 'root',
+  storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export default function configureStore(preloadedState) {
+  const middlewares = [loggerMiddleware, thunkMiddleware]
+  const middlewareEnhancer = applyMiddleware(...middlewares)
+
+  const enhancers = [middlewareEnhancer, monitorReducersEnhancer]
+  const composedEnhancers = compose(...enhancers)
+
+  let store = createStore(persistedReducer, preloadedState, composedEnhancers)
+
+  let persistor = persistStore(store)
+
+  return { store, persistor }
+}

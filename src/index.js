@@ -4,24 +4,27 @@ import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
 import I18n from 'redux-i18n'
 import detectBrowserLanguage from 'detect-browser-language'
-import { translations } from 'Common/locales/translations'
+import { PersistGate } from 'redux-persist/integration/react'
 
-import configureStore from './configureStore'
+import { translations } from 'Common/locales/translations'
+import configureStore from 'Reducers/configureStore'
+import Main from 'Modules/main'
 
 import './index.css'
-import Main from './Modules/main'
 import * as serviceWorker from './serviceWorker'
 
-const store = configureStore()
+const { store, persistor } = configureStore()
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <I18n translations={translations} initialLang={detectBrowserLanguage()} fallbackLang="en">
-        <HashRouter>
-          <Main />
-        </HashRouter>
-      </I18n>
+      <PersistGate loading={null} persistor={persistor}>
+        <I18n translations={translations} initialLang={detectBrowserLanguage()} fallbackLang="en">
+          <HashRouter>
+            <Main />
+          </HashRouter>
+        </I18n>
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

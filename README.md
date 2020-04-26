@@ -68,3 +68,4 @@ The illustrations was created with [Absurd design](https://absurd.design/).
 [Redux Router](https://reacttraining.com/react-router/web/guides/quick-start).
 [React tippy](https://www.npmjs.com/package/react-tippy).
 [Redux i18n](https://github.com/APSL/redux-i18n).
+[Redux persist](https://github.com/rt2zz/redux-persist).
