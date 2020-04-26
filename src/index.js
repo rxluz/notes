@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
 import I18n from 'redux-i18n'
 import { translations } from './common/locales/translations'
+import detectBrowserLanguage from 'detect-browser-language'
 
 import configureStore from './configureStore'
 
@@ -16,7 +17,7 @@ const store = configureStore()
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <I18n translations={translations} initialLang="en" fallbackLang="en">
+      <I18n translations={translations} initialLang={detectBrowserLanguage()} fallbackLang="en">
         <HashRouter>
           <Main />
         </HashRouter>
