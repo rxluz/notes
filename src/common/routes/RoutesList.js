@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Switch, Route } from 'react-router-dom'
 import TestRoute from './TestRoute'
+import NotFound from '../../modules/main/NotFound'
 
 const RoutesList = () => (
   <Switch>
@@ -19,7 +20,7 @@ const RoutesList = () => (
     </Route>
 
     <Route path="*" exact={true}>
-      <TestRoute title="not found" />
+      <NotFound />
     </Route>
   </Switch>
 )
