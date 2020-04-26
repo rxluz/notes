@@ -9,6 +9,9 @@ const RoutesList = () => (
     <Route path="/new" exact={true}>
       <TestRoute title="Create a new note" />
     </Route>
+    <Route path="/edit/:uuid">
+      <TestRoute title="Edit note" />
+    </Route>
     <Route path="/settings" exact={true}>
       <TestRoute title="settings page" />
     </Route>

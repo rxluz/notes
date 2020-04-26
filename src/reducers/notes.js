@@ -4,6 +4,7 @@ const settings = (state = [], action) => {
       return {
         list: [
           {
+            uuid: 'f913fa80-ed9d-4ccc-810e-d168aa309bd9',
             title: 'Hello world',
             content: 'hey hey hey',
             pinned: true,
