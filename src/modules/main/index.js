@@ -1,30 +1,13 @@
 import React from 'react'
-import logo from './logo.svg'
 import './Main.scss'
+import 'react-tippy/dist/tippy.css'
 
-import { useSelector } from 'react-redux'
+import RoutesList from './RoutesList'
 
-const Main = () => {
-  const settings = useSelector((state) => state.settings)
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React {settings.hello}
-        </a>
-      </header>
-    </div>
-  )
-}
+const Main = () => (
+  <div className="App">
+    <RoutesList />
+  </div>
+)
 
 export default Main
