@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Switch, Route } from 'react-router-dom'
 import TestRoute from './TestRoute'
-import NotFound from '../../modules/main/NotFound'
+import NotFound from 'Modules/main/NotFound'
 
 const RoutesList = () => (
   <Switch>

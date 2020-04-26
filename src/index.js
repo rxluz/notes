@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
 import I18n from 'redux-i18n'
-import { translations } from './common/locales/translations'
 import detectBrowserLanguage from 'detect-browser-language'
+import { translations } from 'Common/locales/translations'
 
 import configureStore from './configureStore'
 
 import './index.css'
-import Main from './modules/main'
+import Main from './Modules/main'
 import * as serviceWorker from './serviceWorker'
 
 const store = configureStore()
