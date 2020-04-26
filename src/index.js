@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom'
+import I18n from 'redux-i18n'
+import { translations } from './common/locales/translations'
 
 import configureStore from './configureStore'
 
@@ -14,9 +16,11 @@ const store = configureStore()
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter>
-        <Main />
-      </HashRouter>
+      <I18n translations={translations} initialLang="en" fallbackLang="en">
+        <HashRouter>
+          <Main />
+        </HashRouter>
+      </I18n>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
