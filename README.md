@@ -40,6 +40,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `npm run translation:extract`
+
+Extracts all the translations strings from js files and put them in a poedit (.pot) template file. [Read more](https://medium.com/front-end-weekly/3-improving-the-translations-in-your-code-dabdd1356679).
+
+### `npm run translation:import`
+
+Import all the translations available from poedit (.mo) translations file
+
 ### Deployment
 
 ### `npm run deploy`
@@ -53,4 +61,10 @@ The illustrations was created with [Absurd design](https://absurd.design/).
 [Google Fonts](https://fonts.google.com/).
 [Favicon.io](https://favicon.io/favicon-generator/).
 [Github pages](https://pages.github.com/).
-React
+[React](https://reactjs.org/).
+[Redux](https://redux.js.org/).
+[React-Redux](https://react-redux.js.org/).
+[Redux Thunk](https://github.com/reduxjs/redux-thunk).
+[Redux Router](https://reacttraining.com/react-router/web/guides/quick-start).
+[React tippy](https://www.npmjs.com/package/react-tippy).
+[Redux i18n](https://github.com/APSL/redux-i18n).
