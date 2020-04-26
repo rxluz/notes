@@ -1,0 +1,28 @@
+.chip {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  width: 100%;
+  display: initial;
+  padding: 2px 15px 0px 15px;
+  font-size: 10px;
+  border-color: #263238;
+
+  &__state {
+    &-active {
+      border-width: 2px;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    height: 70%;
+    width: 26px;
+    top: 4px;
+    background-color: white;
+    text-align: center;
+  }
+}
