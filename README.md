@@ -52,7 +52,7 @@ Import all the translations available from poedit (.mo) translations file
 
 ### `npm run deploy`
 
-Publish the static files in gh-pages branch
+Publish the static files in gh-pages branch, also publishes the storybook in gh-page, it's available in the /storybook page. [Example](https://notes.rxluz.dev/storybook).
 
 ### Acknowledgments
 
@@ -69,3 +69,4 @@ The illustrations was created with [Absurd design](https://absurd.design/).
 [React tippy](https://www.npmjs.com/package/react-tippy).
 [Redux i18n](https://github.com/APSL/redux-i18n).
 [Redux persist](https://github.com/rt2zz/redux-persist).
+[Storybook](https://storybook.js.org/).

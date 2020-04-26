@@ -25,14 +25,16 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run build-storybook",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "eject": "react-scripts eject",
     "translation:extract": "i18n_extract --pattern=translate --source=src --locales=src/common/locales",
-    "translation:import": "i18n_import --translations=src/common/locales --locales=src/common/locales"
+    "translation:import": "i18n_import --translations=src/common/locales --locales=src/common/locales",
+    "storybook": "start-storybook -p 9009 -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +52,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-create-react-app": "^2.1.1",
+    "@storybook/react": "^5.3.18",
     "gh-pages": "^2.2.0",
     "redux-devtools": "^3.5.0",
     "redux-devtools-extension": "^2.13.8"
