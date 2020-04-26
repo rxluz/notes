@@ -2,7 +2,10 @@ const settings = (state = [], action) => {
   switch (action.type) {
     default:
       return {
-        hello: 'worldwww',
+        language: 'browser',
+        darkMode: 'browser',
+        autosave: true,
+        saveAndCreateNew: true,
       }
   }
 }
