@@ -5,7 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="The most cool notes app that you'll see today" />
+    <meta name="description" content="The coolest notes app that you'll see today" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap"
@@ -46,6 +46,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background-color: transparent !important;
       }
 
       .center {
@@ -57,7 +58,6 @@
       }
 
       .no-javascript {
-        background-color: white;
         text-align: center;
         display: inline-block;
         line-height: 40px;
@@ -71,6 +71,23 @@
         left: calc(50% - 175px);
         position: relative;
         margin-bottom: 50px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        .no-javascript {
+          background-color: white;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #121212;
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .no-javascript {
+          background-color: #121212;
+        }
       }
     </style>
     <!--
