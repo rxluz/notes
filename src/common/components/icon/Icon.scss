@@ -1,0 +1,45 @@
+@import 'Common/utils/colours';
+
+.icon {
+  position: relative;
+  display: initial;
+
+  &__state {
+    &-active {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: red;
+        top: 0px;
+        right: 0px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .icon {
+    &__state {
+      &-active {
+        &::before {
+          background: $dark-main-color;
+        }
+      }
+    }
+  }
+}
+
+.light-mode {
+  .icon {
+    &__state {
+      &-active {
+        &::before {
+          background: $light-main-color;
+        }
+      }
+    }
+  }
+}
