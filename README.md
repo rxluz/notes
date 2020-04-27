@@ -57,7 +57,7 @@ Publish the static files in gh-pages branch, also publishes the storybook in gh-
 ### Acknowledgments
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
-The illustrations was created with [Absurd design](https://absurd.design/).<br />
+Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 [Google Fonts](https://fonts.google.com/).<br />
 [Favicon.io](https://favicon.io/favicon-generator/).<br />
 [Github pages](https://pages.github.com/).<br />

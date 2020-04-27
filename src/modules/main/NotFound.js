@@ -1,6 +1,5 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import NotFoundImg from './not-found.jpg'
 
 const NotFound = (_props, context) => {
   const { t: translate } = context
@@ -9,7 +8,7 @@ const NotFound = (_props, context) => {
     <div class="center">
       <div class="no-javascript">
         <img
-          src={NotFoundImg}
+          src={require('./not-found.png')}
           alt={translate('An nonsense illustration from absurd.design', {}, 'image credits')}
         />
         <br />
