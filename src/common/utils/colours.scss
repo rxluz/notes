@@ -59,9 +59,45 @@ $dark-colour-olive-green: linear-gradient(90deg, #465736 0%, #9dc973 30%, #46573
   }
 }
 
+.pink-border {
+  border-color: $light-colour-pink;
+}
+
+.salmon-border {
+  border-color: $light-colour-salmon;
+}
+
+.yellow-border {
+  border-color: $light-colour-yellow;
+}
+
+.lavanda-border {
+  border-color: $light-colour-lavanda;
+}
+
+.blue-border {
+  border-color: $light-colour-blue;
+}
+
+.ocean-blue-border {
+  border-color: $light-colour-ocean-blue;
+}
+
+.mint-green-border {
+  border-color: $light-colour-mint-green;
+}
+
+.olive-green-border {
+  border-color: $light-colour-olive-green;
+}
+
 .dark-mode {
   .pink-bg {
     background: $dark-colour-pink;
+  }
+
+  .pink-border {
+    border-color: $dark-colour-pink;
   }
 
   .salmon-bg {
