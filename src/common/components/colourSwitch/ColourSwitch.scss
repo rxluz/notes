@@ -1,0 +1,58 @@
+@import 'Common/utils/colours';
+
+.colour-switch {
+  position: relative;
+  width: 28px;
+  &__item {
+    position: relative;
+    margin-top: 10px;
+    border-style: solid;
+
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: block;
+    font-size: 10px;
+    cursor: pointer;
+
+    &__state {
+      &-active {
+        border-width: 2px;
+      }
+    }
+  }
+
+  &__items {
+    position: absolute;
+    bottom: 30px;
+    height: auto;
+    width: 32px;
+    text-align: center;
+  }
+}
+
+.dark-mode {
+  .colour-switch {
+    &__main {
+      border-color: $dark-box-border-color;
+
+      &--default {
+        border-color: $light-icon-color;
+        border-width: 5px;
+      }
+    }
+  }
+}
+
+.light-mode {
+  .colour-switch {
+    &__main {
+      border-color: $light-box-border-color;
+
+      &--default {
+        border-color: $dark-icon-color;
+        border-width: 5px;
+      }
+    }
+  }
+}
