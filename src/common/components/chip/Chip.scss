@@ -1,3 +1,5 @@
+@import 'Common/utils/colours';
+
 .chip {
   position: relative;
   border-style: solid;
@@ -7,7 +9,6 @@
   display: initial;
   padding: 2px 15px 0px 15px;
   font-size: 10px;
-  border-color: #263238;
 
   &__state {
     &-active {
@@ -22,7 +23,28 @@
     height: 70%;
     width: 26px;
     top: 4px;
-    background-color: white;
     text-align: center;
+  }
+}
+
+.dark-mode {
+  .chip {
+    border-color: $dark-box-border-color;
+
+    &__icon {
+      background-color: $dark-bg;
+    }
+  }
+}
+
+.light-mode {
+  .chip {
+    border-color: $light-box-border-color;
+    &__icon {
+      svg {
+        color: $light-main-color;
+      }
+      background-color: $light-bg;
+    }
   }
 }
