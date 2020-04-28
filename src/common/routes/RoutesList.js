@@ -3,19 +3,21 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import TestRoute from './TestRoute'
 import NotFound from 'Modules/main/NotFound'
+import Add from 'Modules/note/Add'
+import Edit from 'Modules/note/Edit'
 
 const RoutesList = () => (
   <Switch>
     <Route path="/new" exact={true}>
-      <TestRoute title="Create a new note" />
+      <Add />
     </Route>
     <Route path="/edit/:uuid">
-      <TestRoute title="Edit note" />
+      <Edit />
     </Route>
     <Route path="/search/" exact={true}>
       <TestRoute title="Search screen" />
     </Route>
-    <Route path="/search/:term">
+    <Route path="/search/:term" exact={true}>
       <TestRoute title="Search term" />
     </Route>
     <Route path="/settings" exact={true}>
