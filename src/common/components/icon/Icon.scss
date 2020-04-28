@@ -4,6 +4,18 @@
   position: relative;
   display: initial;
 
+  &--round {
+    padding: 20px;
+    border-radius: 50%;
+    background: $light-colour-yellow;
+
+    border-width: 0px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+  }
+
   &__state {
     &--active {
       &::before {
@@ -22,6 +34,14 @@
 
 .dark-mode {
   .icon {
+    &--round {
+      box-shadow: 0px 0px 5px $dark-main-color;
+
+      svg {
+        color: $dark-main-color;
+      }
+    }
+
     &__state {
       &--active {
         &::before {
@@ -34,6 +54,14 @@
 
 .light-mode {
   .icon {
+    &--round {
+      box-shadow: 0px 0px 5px $light-main-color;
+
+      svg {
+        color: $dark-main-color;
+      }
+    }
+
     &__state {
       &--active {
         &::before {

@@ -18,12 +18,15 @@ const renderTip = ({ tip, content }) => {
 const Icon = ({
   children: IconElement,
   isActive = false,
+  isRound = false,
   onClick = () => {},
   tip = false,
   translate = (text) => text,
 } = {}) => {
   return (
-    <i className={`icon icon__state-${isActive ? 'active' : 'default'}`}>
+    <i
+      className={`icon icon__state--${isActive ? 'active' : 'default'} ${isRound && 'icon--round'}`}
+    >
       {renderTip({ content: IconElement, tip })}
     </i>
   )

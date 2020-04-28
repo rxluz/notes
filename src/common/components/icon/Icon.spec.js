@@ -1,9 +1,14 @@
 import React from 'react'
+import { FiAperture } from 'react-icons/fi'
 import { render } from '@testing-library/react'
-import Chip from './Chip'
+import Icon from './Icon'
 
 test('renders hello world inside the icon', () => {
-  const { getByText } = render(<Chip>Hello world</Chip>)
-  const linkElement = getByText(/Hello/i)
-  expect(linkElement).toBeInTheDocument()
+  const { container } = render(
+    <Icon>
+      <FiAperture />
+    </Icon>,
+  )
+
+  expect(container.firstChild.classList.contains('icon')).toBe(true)
 })
