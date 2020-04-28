@@ -12,6 +12,12 @@ const RoutesList = () => (
     <Route path="/edit/:uuid">
       <TestRoute title="Edit note" />
     </Route>
+    <Route path="/search/" exact={true}>
+      <TestRoute title="Search screen" />
+    </Route>
+    <Route path="/search/:term">
+      <TestRoute title="Search term" />
+    </Route>
     <Route path="/settings" exact={true}>
       <TestRoute title="settings page" />
     </Route>
