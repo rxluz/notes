@@ -68,7 +68,17 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 [Redux Router](https://reacttraining.com/react-router/web/guides/quick-start).<br />
 [React tippy](https://www.npmjs.com/package/react-tippy).<br />
 [Redux i18n](https://github.com/APSL/redux-i18n).<br />
-[Reacg icons](https://react-icons.github.io/).<br />
+[React icons](https://react-icons.github.io/).<br />
 [Redux persist](https://github.com/rt2zz/redux-persist).<br />
 [Storybook](https://storybook.js.org/).
 [BEM CSS](http://getbem.com/introduction/).
+
+## Known technical debts
+
+- Review the BEM classes names [Know more](https://seesparkbox.com/foundry/bem_by_example)
+- Improve the tests quality
+- Remove useless css classes
+- Allow custom icons in IconTextSwitch
+- Improve iconTextSwitch accessibility
+- Improve colourSwitch accessibility
+- Fix wording errors
