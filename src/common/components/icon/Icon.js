@@ -19,17 +19,22 @@ const Icon = ({
   children: IconElement,
   isActive = false,
   isRound = false,
-  onClick = () => {},
+  onClick = null,
   tip = false,
-  translate = (text) => text,
+  addClass = '',
 } = {}) => {
-  return (
+  const elements = (
     <i
-      className={`icon icon__state--${isActive ? 'active' : 'default'} ${isRound && 'icon--round'}`}
+      className={`icon icon__state--${isActive ? 'active' : 'default'} ${
+        onClick !== null && 'icon__state--clickable'
+      }   ${isRound && 'icon--round'} ${addClass}`}
+      onClick={onClick}
     >
-      {renderTip({ content: IconElement, tip })}
+      {IconElement}
     </i>
   )
+
+  return renderTip({ content: elements, tip })
 }
 
 export default Icon

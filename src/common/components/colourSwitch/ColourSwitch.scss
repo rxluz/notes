@@ -20,7 +20,8 @@
     position: absolute;
     bottom: 30px;
     height: auto;
-    width: 32px;
+    width: 23px;
+
     text-align: center;
   }
 }
@@ -30,6 +31,10 @@
     &__main {
       border-color: $dark-box-border-color;
     }
+
+    &__items {
+      background: $dark-bg;
+    }
   }
 }
 
@@ -37,6 +42,10 @@
   .colour-switch {
     &__main {
       border-color: $light-box-border-color;
+    }
+
+    &__items {
+      background: $light-bg;
     }
   }
 }

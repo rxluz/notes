@@ -4,21 +4,23 @@ import { Tooltip } from 'react-tippy'
 
 import './ChipDisplay.scss'
 
-const getTotaChildrenlWidth = (componentID) => {
+const getTotalChildrenWidth = (componentID) => {
   const children = document.getElementById(componentID).children
 
   let total = 0
 
-  children.forEach((child) => {
-    total = total + child.offsetWidth
-  })
+  if (children.length > 0) {
+    for (const child in children) {
+      total = total + child.offsetWidth
+    }
+  }
 
   return total
 }
 
 const shouldDisplayMoreWarning = ({ componentID }) => {
   const totalChipDisplayWidth = document.getElementById(componentID).offsetWidth
-  const totalChildrenWidth = getTotaChildrenlWidth(componentID)
+  const totalChildrenWidth = getTotalChildrenWidth(componentID)
 
   return totalChipDisplayWidth - 50 < totalChildrenWidth
 }
@@ -66,7 +68,7 @@ const getTotalHidden = ({ showMore, componentID, setShowAllItems, translate }) =
 
 const displayAllOrTotal = ({ showMore, showAllItems, translate, componentID, setShowAllItems }) =>
   showAllItems ? (
-    <div class="chipdisplay__info" onClick={() => setShowAllItems(false)}>
+    <div className="chipdisplay__info" onClick={() => setShowAllItems(false)}>
       {translate('Less', {}, 'collapse chips display to one line')}
     </div>
   ) : (
