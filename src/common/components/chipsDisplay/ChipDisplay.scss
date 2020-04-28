@@ -1,0 +1,43 @@
+@import 'Common/utils/colours';
+
+.chipdisplay {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  .chip {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: auto;
+  }
+
+  &__info {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 20px;
+    text-align: center;
+    font-size: 10px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+
+.dark-mode {
+  .chipdisplay {
+    &__info {
+      background-color: $dark-bg;
+    }
+  }
+}
+
+.light-mode {
+  .chipdisplay {
+    &__info {
+      background-color: $light-bg;
+    }
+  }
+}

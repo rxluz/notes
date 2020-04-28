@@ -10,6 +10,8 @@ const settings = (state = [], action) => {
             pinned: true,
             dateAdded: '2020-04-26T12:54:13.261Z',
             dateEdited: '2020-04-26T12:54:13.261Z',
+            dueDate: '2020-04-26T12:54:13.261Z',
+            color: 'FA8FA3',
             tags: ['hello', 'world'],
           },
         ],

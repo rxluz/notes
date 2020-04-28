@@ -1,0 +1,50 @@
+@import 'Common/utils/colours';
+
+.chip {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  width: 100%;
+  display: initial;
+  padding: 2px 15px 0px 15px;
+  font-size: 10px;
+
+  &__state {
+    &--active {
+      border-width: 2px;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    height: 70%;
+    width: 26px;
+    top: 4px;
+    text-align: center;
+  }
+}
+
+.dark-mode {
+  .chip {
+    border-color: $dark-box-border-color;
+
+    &__icon {
+      background-color: $dark-bg;
+    }
+  }
+}
+
+.light-mode {
+  .chip {
+    border-color: $light-box-border-color;
+    &__icon {
+      svg {
+        color: $light-main-color;
+      }
+      background-color: $light-bg;
+    }
+  }
+}

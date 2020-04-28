@@ -1,0 +1,25 @@
+@import 'Common/utils/colours';
+
+.icon-text-switch {
+  cursor: pointer;
+  position: relative;
+  width: 28px;
+  &__item {
+    position: relative;
+    margin-top: 10px;
+    height: 15px;
+    display: block;
+    font-size: 10px;
+    cursor: pointer;
+    clear: both;
+  }
+
+  &__items {
+    position: absolute;
+    bottom: 50px;
+    height: auto;
+    width: 100px;
+    display: block;
+    text-align: left;
+  }
+}

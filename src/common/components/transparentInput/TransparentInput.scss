@@ -1,0 +1,77 @@
+@import 'Common/utils/colours';
+
+.ti {
+  position: relative;
+  width: 100%;
+  display: block;
+
+  &__input {
+    width: 100%;
+    border: none;
+    background: transparent;
+
+    &--small {
+      font-size: 12px;
+    }
+
+    &--medium {
+      font-size: 32px;
+    }
+
+    &--big {
+      font-size: 42px;
+    }
+  }
+
+  &__state {
+    &--active {
+      border-width: 2px;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    height: 70%;
+    width: 26px;
+    top: 4px;
+    text-align: center;
+  }
+}
+
+.dark-mode {
+  .ti {
+    &__input {
+      color: $dark-main-color;
+
+      &::placeholder {
+        color: $dark-icon-color;
+      }
+    }
+
+    &__icon {
+      svg {
+        color: $light-main-color;
+      }
+    }
+  }
+}
+
+.light-mode {
+  .ti {
+    &__input {
+      color: $light-main-color;
+
+      &::placeholder {
+        color: $dark-icon-color;
+      }
+    }
+
+    &__icon {
+      svg {
+        color: $light-main-color;
+      }
+    }
+  }
+}
