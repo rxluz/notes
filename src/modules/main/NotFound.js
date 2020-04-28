@@ -5,8 +5,8 @@ const NotFound = (_props, context) => {
   const { t: translate } = context
 
   return (
-    <div class="center">
-      <div class="no-javascript">
+    <div className="center">
+      <div className="no-javascript">
         <img
           src={require('./not-found.png')}
           alt={translate('An nonsense illustration from absurd.design', {}, 'image credits')}
