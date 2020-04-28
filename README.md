@@ -87,3 +87,4 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 - Improve HTML semantic
 - [Stop using import in SASS](https://github.com/sass/sass/blob/master/accepted/module-system.md#timeline)
 - Create unit tests in utils functions
+  .
