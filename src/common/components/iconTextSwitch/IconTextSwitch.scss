@@ -12,12 +12,6 @@
     font-size: 10px;
     cursor: pointer;
     clear: both;
-
-    &__state {
-      &-active {
-        border-width: 2px;
-      }
-    }
   }
 
   &__items {

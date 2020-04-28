@@ -91,7 +91,7 @@ const Card = ({
 
   return (
     <dl
-      className={`card card__state-${isHover ? 'active' : 'default'}`}
+      className={`card card__state--${isHover ? 'active' : 'default'}`}
       onMouseEnter={() => setIsHover(true)}
       style={{ width, paddingBottom: isColourValid && '10px' }}
       onMouseLeave={() => setIsHover(false)}

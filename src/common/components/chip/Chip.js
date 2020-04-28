@@ -26,7 +26,7 @@ const Chip = ({
 
   return (
     <div
-      className={`chip chip__state-${isHover ? 'active' : 'default'}`}
+      className={`chip chip__state--${isHover ? 'active' : 'default'}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
