@@ -30,11 +30,11 @@ const Icon = ({
       }   ${isRound && 'icon--round'} ${addClass}`}
       onClick={onClick}
     >
-      {IconElement}
+      {isRound ? IconElement : renderTip({ content: IconElement, tip })}
     </i>
   )
 
-  return renderTip({ content: elements, tip })
+  return isRound ? renderTip({ content: elements, tip }) : elements
 }
 
 export default Icon
