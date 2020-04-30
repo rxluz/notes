@@ -95,8 +95,8 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 [Redux i18n](https://github.com/APSL/redux-i18n).<br />
 [React icons](https://react-icons.github.io/).<br />
 [Redux persist](https://github.com/rt2zz/redux-persist).<br />
-[Storybook](https://storybook.js.org/).
-[BEM CSS](http://getbem.com/introduction/).
+[Storybook](https://storybook.js.org/).<br />
+[BEM CSS](http://getbem.com/introduction/).<br />
 
 ## Known technical debts
 
@@ -117,3 +117,4 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 - Chip chipdisplay class name
 - rename the no-javascript tag
 - create a feature table in readme
+- create tests in stateless interfaces
