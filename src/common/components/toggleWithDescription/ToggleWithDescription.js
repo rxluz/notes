@@ -9,12 +9,13 @@ const ToggleWithDescription = ({
   children,
   isActive = false,
   title = '',
+  addClass = '',
   description = '',
   onToggle = () => {},
   translate = (text) => text,
 } = {}) => {
   return (
-    <div className={`twd`} onClick={onToggle}>
+    <div className={`twd ${addClass}`} onClick={onToggle}>
       <div className="twd__title">{title}</div>
       <div className="twd__description">{description}</div>
 

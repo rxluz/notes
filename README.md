@@ -1,3 +1,28 @@
+## Overview
+
+This is a PWA React application built with Create React App, Hooks, Redux. Follows [Airbnb's Javascript style guide](https://github.com/airbnb/javascript).
+
+Heavily inspired from [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library).
+
+## Main features and tools
+
+| Item                   | Description                                                                                                                                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modern JS              | Compatible with ES6+                                                                                                                                                                                                            |
+| Code Linting           | JavaScript code linting is done using ESLint - a pluggable linter tool for identifying and reporting on patterns in JavaScript. Uses ESLint with eslint-config-airbnb, which tries to follow the Airbnb JavaScript style guide. |
+| Jest                   | Library test                                                                                                                                                                                                                    |
+| React                  | Uses react with hooks                                                                                                                                                                                                           |
+| Redux                  | Uses redux connected with react and redux-thunk, also uses redux persist to save the user data                                                                                                                                  |
+| PWA                    | This application could be used offline and installed both in desktop and mobile                                                                                                                                                 |
+| SASS                   | CSS created using SASS following the BEM Methodology                                                                                                                                                                            |
+| Code spliting          | Automatic code minify and spliting                                                                                                                                                                                              |
+| Storybook              | List all presentational components                                                                                                                                                                                              |
+| Accessibility          | Application uses keyboard shortcuts to allow a better navigation                                                                                                                                                                |
+| Dark mode              | Application automatic detects when the browser is in dark mode and apply it to the layout                                                                                                                                       |
+| Multi-language support | Allow to add new languages using PoEdit files                                                                                                                                                                                   |
+| Atomic commits         | Commits following the angular commit message conventions                                                                                                                                                                        |
+| Prettier               | Automatic code formatting                                                                                                                                                                                                       |
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -87,3 +112,8 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 - Improve HTML semantic
 - [Stop using import in SASS](https://github.com/sass/sass/blob/master/accepted/module-system.md#timeline)
 - Create unit tests in utils functions
+- Use the empty function util
+- Stop using array key as react key elements
+- Chip chipdisplay class name
+- rename the no-javascript tag
+- create a feature table in readme

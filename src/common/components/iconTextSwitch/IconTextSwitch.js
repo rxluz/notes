@@ -2,6 +2,7 @@ import React from 'react'
 import { FiCalendar } from 'react-icons/fi'
 import Icon from 'Common/components/icon'
 import IconTextSwitchItem from './IconTextSwitchItem'
+import { Tooltip } from 'react-tippy'
 
 import './IconTextSwitch.scss'
 
@@ -27,18 +28,22 @@ const IconTextSwitch = ({
   options = [],
   isActive = false,
   onChange = () => {},
+  addClass = '',
+  tip = '',
   translate = (text) => text,
 } = {}) => {
   const [isSelectorOpen, setIsSelectorOpen] = React.useState(false)
 
   return (
-    <div className={`icon-text-switch`}>
+    <div className={`icon-text-switch ${addClass}`}>
       {isSelectorOpen && displayTextOptions({ translate, onChange, options, setIsSelectorOpen })}
 
       <div onClick={() => setIsSelectorOpen(!isSelectorOpen)}>
-        <Icon isActive={isActive}>
-          <FiCalendar />
-        </Icon>
+        <Tooltip title={tip} position="bottom" trigger="mouseenter">
+          <Icon isActive={isActive}>
+            <FiCalendar size="22px" />
+          </Icon>
+        </Tooltip>
       </div>
     </div>
   )

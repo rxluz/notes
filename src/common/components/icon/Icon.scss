@@ -21,13 +21,16 @@
       &::before {
         content: '';
         position: absolute;
-        width: 4px;
-        height: 4px;
-        background: red;
-        top: 0px;
-        right: 0px;
+        width: 6px;
+        height: 6px;
+        top: -8px;
+        right: -2px;
         border-radius: 50%;
       }
+    }
+
+    &--clickable {
+      cursor: pointer;
     }
   }
 }

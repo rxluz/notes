@@ -9,7 +9,7 @@ const displayRemoveIcon = ({ translate, onRemove }) => {
 
   return (
     <Tooltip title={text} position="bottom" trigger="mouseenter">
-      <i class="chip__icon animated fadeIn" onClick={onRemove}>
+      <i className="chip__icon animated fadeIn" onClick={onRemove}>
         <FiX size="15px" />
       </i>
     </Tooltip>

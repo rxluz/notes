@@ -26,8 +26,8 @@ const addPlusButton = (keyElements) => {
   ))
 }
 
-const KeyShortcutInfo = ({ keys = [], description = '' } = {}) => (
-  <div className={`ksi`}>
+const KeyShortcutInfo = ({ keys = [], description = '', addClass } = {}) => (
+  <div className={`ksi ${addClass}`}>
     {addPlusButton(generateKeys({ keys }))} <div className="ksi__description">{description} </div>
   </div>
 )
