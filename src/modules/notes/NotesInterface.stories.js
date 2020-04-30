@@ -1,0 +1,57 @@
+import React from 'react'
+import NotesInterface from './NotesInterface'
+import moment from 'moment'
+import { v4 as uuidv4 } from 'uuid'
+
+import { times } from 'lodash'
+
+import { action } from '@storybook/addon-actions'
+import { Light, Dark } from 'Common/utils/storybookMode'
+
+import 'react-tippy/dist/tippy.css'
+
+export default { title: 'InterfaceNotes' }
+
+const myNotes = (
+  <NotesInterface
+    onDarkMode={action('onDarkMode')}
+    onAddNote={action('onAddNote')}
+    onAutoSave={action('onAutoSave')}
+    onClose={action('onClose')}
+  />
+)
+
+const myNotesWithContent = (
+  <NotesInterface
+    onDarkMode={action('onDarkMode')}
+    onAddNote={action('onAddNote')}
+    onAutoSave={action('onAutoSave')}
+    onClose={action('onClose')}
+    notes={[...Array(30)].fill({
+      uuid: uuidv4(),
+      isStarred: true,
+      colour: 'salmon',
+      title: 'Hello world',
+      dueDate: moment().add(1, 'day').toISOString(),
+      content: 'hey ola que tal',
+      tags: [
+        'hello',
+        'world',
+        'hey',
+        'ha',
+        'one more here',
+        'hello',
+        'world',
+        'hey',
+        'ha',
+        'one more here',
+      ],
+    })}
+  />
+)
+
+export const NotesInterfaceLight = () => <Light>{myNotes}</Light>
+export const NotesInterfaceDark = () => <Dark>{myNotes}</Dark>
+
+export const NotesInterfaceLightWithContent = () => <Light>{myNotesWithContent}</Light>
+export const NotesInterfaceDarkWithContent = () => <Dark>{myNotesWithContent}</Dark>
