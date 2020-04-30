@@ -73,49 +73,46 @@ const NotesInterface = ({
   onSettings = emptyFunc,
   onSearch = emptyFunc,
   translate = emptyFunc,
-}) => {
-  console.log(notes.length)
-  return (
-    <div className="notes-interface">
-      <header className="notes-interface__header">
-        <h1 className="notes-interface__header-title">{translate('My notes', '', 'page title')}</h1>
+}) => (
+  <div className="notes-interface">
+    <header className="notes-interface__header">
+      <h1 className="notes-interface__header-title">{translate('My notes', '', 'page title')}</h1>
 
-        <div className="notes-interface__header-options">
-          <Icon
-            onClick={onSearch}
-            tip={translate('Search notes', '', 'button to return to all notes results')}
-            addClass="notes-interface__header-option"
-          >
-            <FiSearch size="40px" />
-          </Icon>
-          <Icon
-            onClick={onSettings}
-            tip={translate('Settings', '', 'button to return to all notes results')}
-            addClass="notes-interface__header-option"
-          >
-            <FiSettings size="40px" />
-          </Icon>
-        </div>
-      </header>
-      <main className="notes-interface__main">
-        {notes.length > 0 && displayNotes(notes)}
+      <div className="notes-interface__header-options">
+        <Icon
+          onClick={onSearch}
+          tip={translate('Search notes', '', 'button to return to all notes results')}
+          addClass="notes-interface__header-option"
+        >
+          <FiSearch size="40px" />
+        </Icon>
+        <Icon
+          onClick={onSettings}
+          tip={translate('Settings', '', 'button to return to all notes results')}
+          addClass="notes-interface__header-option"
+        >
+          <FiSettings size="40px" />
+        </Icon>
+      </div>
+    </header>
+    <main className="notes-interface__main">
+      {notes.length > 0 && displayNotes(notes)}
 
-        {notes.length === 0 && renderEmptyState({ translate, searchTerm })}
-      </main>
+      {notes.length === 0 && renderEmptyState({ translate, searchTerm })}
+    </main>
 
-      <footer className="note-interface__footer">
-        <div className="note-interface__footer-float">
-          <Icon
-            tip={translate('Save and close', '', 'float button in add/edit interface')}
-            isRound
-            onClick={onAdd}
-          >
-            <FiPlus size="44px" />
-          </Icon>
-        </div>
-      </footer>
-    </div>
-  )
-}
+    <footer className="note-interface__footer">
+      <div className="note-interface__footer-float">
+        <Icon
+          tip={translate('Save and close', '', 'float button in add/edit interface')}
+          isRound
+          onClick={onAdd}
+        >
+          <FiPlus size="44px" />
+        </Icon>
+      </div>
+    </footer>
+  </div>
+)
 
 export default NotesInterface
