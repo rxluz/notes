@@ -5,3 +5,28 @@
     color: $dark-main-color;
   }
 }
+
+button {
+  background: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  button {
+    color: $dark-main-color;
+  }
+}
+
+.light-mode {
+  button {
+    color: $light-main-color !important;
+  }
+}
+
+body:not(.light-mode) {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.7);
+}

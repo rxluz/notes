@@ -1,9 +1,7 @@
 import React from 'react'
-import NotesInterface from './NotesInterface'
+import NotesInterface from './NotesPage'
 import moment from 'moment'
 import { v4 as uuidv4 } from 'uuid'
-
-import { times } from 'lodash'
 
 import { action } from '@storybook/addon-actions'
 import { Light, Dark } from 'Common/utils/storybookMode'
@@ -18,11 +16,14 @@ const myNotes = (
     onAddNote={action('onAddNote')}
     onAutoSave={action('onAutoSave')}
     onClose={action('onClose')}
+    translate={(text) => text}
+    notes={[]}
   />
 )
 
 const myNotesWithContent = (
   <NotesInterface
+    translate={(text) => text}
     onDarkMode={action('onDarkMode')}
     onAddNote={action('onAddNote')}
     onAutoSave={action('onAutoSave')}

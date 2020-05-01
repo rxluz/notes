@@ -1,0 +1,150 @@
+@import 'Common/utils/colours';
+
+.notes-interface {
+  &__header {
+    position: fixed;
+    top: 0px;
+    height: 70px;
+    z-index: 10;
+
+    &--search-enabled {
+      height: 100px;
+    }
+
+    &-title {
+      margin-top: 0px;
+      float: left;
+      width: calc(100% - 100px);
+    }
+
+    &-options {
+      float: right;
+      height: 50px;
+      width: 79px;
+      margin-right: 10px;
+      :last-child {
+        float: right;
+      }
+    }
+
+    &-option {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      width: 37px;
+      height: 50px;
+      padding: 0px;
+      margin: 0px;
+      display: inline-block;
+    }
+
+    &-search {
+      clear: both;
+      top: -36px;
+      position: relative;
+
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__main {
+    margin-top: 100px;
+
+    &-item {
+      margin-bottom: 20px;
+    }
+
+    &-empty {
+      width: 100%;
+      &-info {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        img {
+          width: 100%;
+          max-width: 340px;
+        }
+      }
+    }
+  }
+}
+
+.light-mode {
+  .notes-interface {
+    button {
+      color: $dark-main-color;
+    }
+
+    &__header {
+      background: $light-bg;
+
+      &-option {
+        svg {
+          color: $dark-bg !important;
+        }
+      }
+    }
+
+    &__main {
+      &-empty {
+        &-info {
+          color: $light-main-color;
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .notes-interface {
+    button {
+      color: $dark-main-color;
+    }
+
+    &__header {
+      background: $dark-bg;
+
+      &-option {
+        svg {
+          color: $light-bg !important;
+        }
+      }
+    }
+  }
+}
+
+.desktop {
+  .notes-interface {
+    padding: 30px;
+
+    &__header {
+      padding-top: 30px;
+      width: calc(100% - 60px);
+    }
+  }
+}
+
+.mobile-tablet {
+  .notes-interface {
+    padding: 10px;
+    width: 100%;
+
+    &__header {
+      padding-top: 10px;
+      width: calc(100% - 20px);
+
+      &-options {
+        margin-top: 10px;
+      }
+    }
+
+    &__main {
+      width: 100%;
+      .card {
+        width: calc(100% - 60px) !important;
+      }
+    }
+  }
+}

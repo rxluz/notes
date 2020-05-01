@@ -1,34 +1,47 @@
 import React from 'react'
-import SettingsInterface from './SettingsInterface'
+import * as PropTypes from 'prop-types'
+import SettingsInterface from './SettingsPage'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { isDarkMode } from 'Common/utils/browser.utils'
+import * as settingActions from './settings.actions'
+import { settingsInterface } from './settings.interface'
+import { withRouter } from 'react-router'
 
-const action = (description) => (func) => console.log(func, description)
-
-const list = ['hello', 'world', 'hey', 'haha']
-const TAGS = [...list, ...list, ...list]
-const OPTIONS = []
-OPTIONS.push({ value: 'TODAY', text: 'Today' })
-OPTIONS.push({ value: 'TOMORROW', text: 'Tomorrow' })
-OPTIONS.push({ value: 'TWO_DAYS', text: 'Two days' })
-OPTIONS.push({ value: 'NEXT_WEEK', text: 'Next week' })
-
-const Edit = () => (
+const Settings = (props = settingsInterface, { t: translate }) => (
   <SettingsInterface
-    uuid="1234"
-    scheduleOptions={OPTIONS}
-    onRemoveTag={action('removeTags')}
-    onAddTag={action('AddTags')}
-    onPin={action('Pin')}
-    isScheduled={true}
-    isPinned={true}
-    onChangeColour={action('ChangeColour')}
-    onDelete={action('onDelete')}
-    onInfo={action('onInfo')}
-    onSaveAndClose={action('onSaveAndClose')}
-    onSave={action('onSave')}
-    onSchedule={action('onSchedule')}
-    colour="pink"
-    tags={TAGS}
+    darkMode={props.darkMode === 'browser' ? isDarkMode() : props.darkMode}
+    saveAndCreateNew={props.saveAndCreateNew}
+    autoSave={props.autoSave}
+    onDarkMode={props.setDarkModeToggle}
+    onSaveAndCreateNewToggle={props.setSaveAndCreateNewToggle}
+    onAutoSave={props.setAutoSaveToggle}
+    onClose={() => props.history.goBack()}
+    translate={translate}
   />
 )
 
-export default Edit
+Settings.contextTypes = {
+  t: PropTypes.func,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }),
+}
+
+const mapStateToProps = ({ settings = settingsInterface } = {}) => ({
+  autoSave: settings.autoSave,
+  darkMode: settings.darkMode,
+  saveAndCreateNew: settings.saveAndCreateNew,
+})
+
+const mapDispatchToPros = (dispatch) =>
+  bindActionCreators(
+    {
+      setAutoSaveToggle: settingActions.setAutoSaveToggle,
+      setDarkModeToggle: settingActions.setDarkModeToggle,
+      setSaveAndCreateNewToggle: settingActions.setSaveAndCreateNewToggle,
+    },
+    dispatch,
+  )
+
+export default connect(mapStateToProps, mapDispatchToPros)(withRouter(Settings))

@@ -23,6 +23,17 @@ Heavily inspired from [Egghead.io - How to Write an Open Source JavaScript Libra
 | Atomic commits         | Commits following the angular commit message conventions                                                                                                                                                                        |
 | Prettier               | Automatic code formatting                                                                                                                                                                                                       |
 
+## Shortcuts
+
+| shortcut         | action                           |
+| ---------------- | -------------------------------- |
+| alt / option + n | create a new note                |
+| alt / option + p | settings                         |
+| alt / option + h | help page                        |
+| alt / option + s | search note                      |
+| alt / option + a | list all notes                   |
+| shift + enter    | save this note and add a new one |
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -95,8 +106,8 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 [Redux i18n](https://github.com/APSL/redux-i18n).<br />
 [React icons](https://react-icons.github.io/).<br />
 [Redux persist](https://github.com/rt2zz/redux-persist).<br />
-[Storybook](https://storybook.js.org/).
-[BEM CSS](http://getbem.com/introduction/).
+[Storybook](https://storybook.js.org/).<br />
+[BEM CSS](http://getbem.com/introduction/).<br />
 
 ## Known technical debts
 
@@ -117,3 +128,36 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 - Chip chipdisplay class name
 - rename the no-javascript tag
 - create a feature table in readme
+- create tests in stateless interfaces
+- replace the translation system to a new one that don't use the old context api
+- rename interfaces to pages
+- Organize the imports order (absolute imports first)
+- Start using proptypes in interfaces
+- Improve the search results (better string filter
+- Highlight the search terms
+- Publish the shortcuts
+- Publish to github
+- Fix storybook errors OK
+- Check layout mobile OK
+- Check texts in small screens
+- Fix the dark mode checkbox
+- Return 404 in edit mode
+- On delete return to main screen OK
+- Fix the remove in edit mode OK
+- On close in add mode delete the note in add mode OK
+- Dont display the drafts in the main list OK
+- Display the pinned notes first OK
+- Don't display shortcuts in mobile mode OK
+- Remove fist clear button in mobile mode OK
+- Improve the mobile padding and alignment OK
+- Change the float button colour OK
+- Make the shortcuts work!
+- Make the settings add new note by default works
+- Create a portuguese version and a switcher?
+- Attach the docs created
+- Add the search signal when the search is active
+- Check if possible embebed images
+- Verify what happens when the user add many tags
+- The previous tags are displaying in new notes
+- Create note undo?
+- Handle with invalid notes in edit mode

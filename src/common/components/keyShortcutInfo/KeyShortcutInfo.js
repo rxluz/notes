@@ -3,14 +3,22 @@ import { isMac } from 'Common/utils/os.utils'
 
 import './KeyShortcutInfo.scss'
 
-const setMetaKeyName = () => (isMac() ? 'command' : 'control')
+const setMetaKeyName = (key) => {
+  if (key === 'meta') {
+    return isMac() ? 'command' : 'control'
+  }
 
-const setKeyName = (key) => (key === 'meta' ? setMetaKeyName(key) : key)
+  if (key === 'alt') {
+    return isMac() ? 'option' : 'alt'
+  }
+
+  return key
+}
 
 const generateKeys = ({ keys }) =>
   keys.map((key) => (
     <kbd key={key} className="ksi__key">
-      {setKeyName(key)}
+      {setMetaKeyName(key)}
     </kbd>
   ))
 

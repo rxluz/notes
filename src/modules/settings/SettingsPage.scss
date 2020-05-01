@@ -1,0 +1,73 @@
+@import 'Common/utils/colours';
+
+.settings-interface {
+  &__header {
+    &-title {
+      margin-top: 0px;
+      float: left;
+      width: calc(100% - 60px);
+    }
+
+    &-close {
+      float: right;
+      height: 50px;
+      width: 32px;
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+  }
+
+  &__main {
+    margin-top: 40px;
+
+    &-item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.react-toggle--checked {
+  .react-toggle-track {
+    background: $main-color !important;
+  }
+}
+
+.light-mode {
+  .settings-interface {
+    &__header {
+      &-close {
+        svg {
+          color: $dark-bg !important;
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .settings-interface {
+    &__header {
+      &-close {
+        svg {
+          color: $light-bg !important;
+        }
+      }
+    }
+  }
+}
+
+.desktop {
+  .settings-interface {
+    padding: 30px;
+  }
+}
+
+.mobile-tablet {
+  .settings-interface {
+    padding: 10px;
+
+    &__header {
+      height: 50px;
+    }
+  }
+}

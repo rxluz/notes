@@ -6,6 +6,8 @@ import Chip from 'Common/components/chip'
 import ChipsDisplay from 'Common/components/chipsDisplay'
 import COLOURS from 'Common/utils/colours.constants'
 import './Card.scss'
+import { emptyFunc } from 'Common/utils/general.utils'
+import { isMobileOrTablet } from 'Common/utils/browser.utils'
 
 const getFixedIcons = ({ isStarred, dueDate, translate }) => {
   const hasDueDate = !!dueDate
@@ -13,7 +15,7 @@ const getFixedIcons = ({ isStarred, dueDate, translate }) => {
   const humanDueDate = `${translate(
     'Due',
     {},
-    'Icod that indicates that the note is starred',
+    'Icon that indicates that the note is starred',
   )} ${getRelativeDate({ dueDate })}`
 
   if (isStarred || hasDueDate) {
@@ -25,7 +27,7 @@ const getFixedIcons = ({ isStarred, dueDate, translate }) => {
               title={translate(
                 'This note is starred',
                 {},
-                'Icod that indicates that the note is starred',
+                'Icon that indicates that the note is starred',
               )}
               position="bottom"
               trigger="mouseenter"
@@ -73,13 +75,14 @@ const getTagsList = ({ tags, width, translate }) => {
 }
 
 const Card = ({
+  onClick = emptyFunc,
   isStarred = false,
   title = '',
   content = '',
   tags = [],
   dueDate = '',
   colour = 'default',
-  width = '300px',
+  width = isMobileOrTablet() ? '100%' : '300px',
   translate = (text) => text,
 } = {}) => {
   const [isHover, setIsHover] = React.useState(false)
@@ -91,9 +94,10 @@ const Card = ({
 
   return (
     <dl
+      onClick={onClick}
       className={`card card__state--${isHover ? 'active' : 'default'}`}
       onMouseEnter={() => setIsHover(true)}
-      style={{ width, paddingBottom: isColourValid && '10px' }}
+      style={{ paddingBottom: isColourValid && '10px' }}
       onMouseLeave={() => setIsHover(false)}
     >
       {hasTitle && <dt className="card__title">{title}</dt>}

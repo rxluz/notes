@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="The coolest notes app that you'll see today" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -74,31 +79,23 @@
       }
 
       @media (prefers-color-scheme: light) {
-        .no-javascript {
+        body:not(.dark-mode) .no-javascript {
           background-color: white;
         }
       }
 
       @media (prefers-color-scheme: dark) {
-        body {
+        body:not(.light-mode) {
           background-color: #121212;
           color: rgba(255, 255, 255, 0.7);
         }
 
-        .no-javascript {
+        body:not(.light-mode) .no-javascript {
           background-color: #121212;
         }
       }
     </style>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>Notes</title>
   </head>
   <body>

@@ -1,5 +1,5 @@
 import React from 'react'
-import ShortcutsInterface from './ShortcutsInterface'
+import ShortcutsPage from './ShortcutsPage'
 
 import { action } from '@storybook/addon-actions'
 import { Light, Dark } from 'Common/utils/storybookMode'
@@ -9,7 +9,8 @@ import 'react-tippy/dist/tippy.css'
 export default { title: 'InterfaceShortcuts' }
 
 const myShortcuts = (
-  <ShortcutsInterface
+  <ShortcutsPage
+    translate={(text) => text}
     onDarkMode={action('onDarkMode')}
     onAddNote={action('onAddNote')}
     onAutoSave={action('onAutoSave')}

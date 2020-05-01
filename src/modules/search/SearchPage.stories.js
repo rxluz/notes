@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchInterface from './SearchInterface'
+import SearchInterface from './SearchPage'
 
 import { action } from '@storybook/addon-actions'
 import { Light, Dark } from 'Common/utils/storybookMode'
@@ -18,6 +18,7 @@ OPTIONS.push({ value: 'NEXT_WEEK', text: 'Next week' })
 
 const mySearch = (
   <SearchInterface
+    translate={(text) => text}
     uuid="1234"
     scheduleOptions={OPTIONS}
     onRemoveTag={action('removeTags')}

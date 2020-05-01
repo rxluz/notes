@@ -2,10 +2,12 @@ import React from 'react'
 import { FiX } from 'react-icons/fi'
 import { Tooltip } from 'react-tippy'
 
+import { isMobileOrTablet } from 'Common/utils/browser.utils'
+
 import './Chip.scss'
 
 const displayRemoveIcon = ({ translate, onRemove }) => {
-  const text = translate('Remove this tag', {}, 'Acessibility descriptio for delete icon')
+  const text = translate('Remove this tag', {}, 'Accessibility description for delete icon')
 
   return (
     <Tooltip title={text} position="bottom" trigger="mouseenter">
@@ -26,12 +28,12 @@ const Chip = ({
 
   return (
     <div
-      className={`chip chip__state--${isHover ? 'active' : 'default'}`}
+      className={`chip chip__state--${isHover || isMobileOrTablet() ? 'active' : 'default'}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
       {children}
-      {isHover && isRemovable && displayRemoveIcon({ translate, onRemove })}
+      {(isHover || isMobileOrTablet()) && isRemovable && displayRemoveIcon({ translate, onRemove })}
     </div>
   )
 }
