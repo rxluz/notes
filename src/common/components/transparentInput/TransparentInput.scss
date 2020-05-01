@@ -9,18 +9,6 @@
     width: 100%;
     border: none;
     background: transparent;
-
-    &--small {
-      font-size: 12px;
-    }
-
-    &--medium {
-      font-size: 32px;
-    }
-
-    &--big {
-      font-size: 42px;
-    }
   }
 
   &__state {
@@ -71,6 +59,50 @@
     &__icon {
       svg {
         color: $light-main-color;
+      }
+    }
+  }
+}
+
+.desktop {
+  .ti {
+    &__input {
+      &--small {
+        font-size: 12px;
+      }
+
+      &--medium {
+        font-size: 32px;
+      }
+
+      &--big {
+        font-size: 42px;
+      }
+    }
+  }
+}
+
+.mobile-tablet {
+  .ti {
+    &__input {
+      padding: 0px;
+
+      &--small {
+        font-size: 20px;
+      }
+
+      &--medium {
+        font-size: 28px;
+      }
+
+      &--big {
+        font-size: 35px;
+      }
+
+      &-confirm {
+        position: absolute;
+        right: 0px;
+        top: 0px;
       }
     }
   }

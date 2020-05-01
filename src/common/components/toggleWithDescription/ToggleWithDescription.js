@@ -15,12 +15,17 @@ const ToggleWithDescription = ({
   translate = (text) => text,
 } = {}) => {
   return (
-    <div className={`twd ${addClass}`} onClick={onToggle}>
+    <div className={`twd ${addClass}`}>
       <div className="twd__title">{title}</div>
       <div className="twd__description">{description}</div>
 
       <div className="twd__button">
-        <Toggle defaultChecked={isActive} aria-labelledby={title} icons={false} />
+        <Toggle
+          defaultChecked={isActive}
+          onClick={onToggle}
+          aria-labelledby={title}
+          icons={false}
+        />
       </div>
     </div>
   )

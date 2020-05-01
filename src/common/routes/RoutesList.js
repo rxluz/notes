@@ -6,7 +6,7 @@ import NotFound from 'Modules/main/NotFound'
 import Add from 'Modules/note/Add'
 import Edit from 'Modules/note/Edit'
 import Notes from 'Modules/notes/Notes'
-import SearchResults from 'Modules/notes/SearchResults'
+import SearchResults from 'Modules/search/SearchResults'
 import Search from 'Modules/search/Search'
 import Settings from 'Modules/settings/Settings'
 import Shortcuts from 'Modules/shortcuts/Shortcuts'
@@ -22,7 +22,7 @@ const RoutesList = () => (
     <Route path="/search/" exact={true}>
       <Search />
     </Route>
-    <Route path="/search/:term" exact={true}>
+    <Route path="/search/:searchTerm" exact={true}>
       <SearchResults />
     </Route>
     <Route path="/settings" exact={true}>
