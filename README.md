@@ -4,6 +4,13 @@ This is a PWA React application built with Create React App, Hooks, Redux. Follo
 
 Heavily inspired from [Egghead.io - How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library).
 
+## Project resources
+
+[List of presentational components](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
+[Ideas](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
+[Inspiration board](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
+[Mockups](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
+
 ## Main features and tools
 
 | Item                   | Description                                                                                                                                                                                                                     |
