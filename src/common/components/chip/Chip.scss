@@ -1,6 +1,13 @@
 @import 'Common/utils/colours';
 
 .chip {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+
   position: relative;
   border-style: solid;
   border-width: 1px;
@@ -13,6 +20,7 @@
   &__state {
     &--active {
       border-width: 2px;
+      padding-right: 40px;
     }
   }
 
