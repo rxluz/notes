@@ -2,7 +2,7 @@
   "name": "notes-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://notes.rxluz.dev",
+  "homepage": "https://rxluz.github.io/notes",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -32,7 +32,7 @@
     "predeploy": "npm run build && npm run build-storybook",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=https://rxluz.github.io/notes && react-scripts build",
     "test": "react-scripts test",
     "build-storybook": "build-storybook -c .storybook -o build/storybook",
     "eject": "react-scripts eject",
