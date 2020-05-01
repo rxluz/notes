@@ -79,6 +79,10 @@
   .card {
     border-color: $dark-box-border-color;
 
+    &__tags {
+      background-color: $dark-bg;
+    }
+
     &__icons {
       svg {
         color: $dark-icon-color;
@@ -93,6 +97,9 @@
   .card {
     border-color: $light-box-border-color;
 
+    &__tags {
+      background-color: $light-bg;
+    }
     &__icons {
       svg {
         color: $light-icon-color;

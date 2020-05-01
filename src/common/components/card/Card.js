@@ -53,7 +53,11 @@ const getFixedIcons = ({ isStarred, dueDate, translate }) => {
 const getRelativeDate = ({ dueDate }) => moment(dueDate).fromNow()
 
 const buildTags = ({ tags, translate }) =>
-  tags.map((tag) => <Chip translate={translate}>{tag}</Chip>)
+  tags.map((tag) => (
+    <Chip key={tag} translate={translate}>
+      {tag}
+    </Chip>
+  ))
 
 const getTagsList = ({ tags, width, translate }) => {
   const hasTags = tags.length > 0

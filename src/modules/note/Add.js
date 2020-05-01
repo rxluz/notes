@@ -11,12 +11,22 @@ import * as noteActions from './note.actions'
 import { noteInterface } from './note.interface'
 import { withRouter } from 'react-router'
 
+const onSaveAndClose = ({ saveAndCreateNew, changeUUID, publishNote, history, uuid }) => {
+  publishNote({ uuid })
+  if (saveAndCreateNew) {
+    changeUUID(uuidv4())
+  } else {
+    history.push('/')
+  }
+}
+
 const Note = (props = noteInterface, { t: translate }) => {
-  const [uuid] = React.useState(uuidv4())
+  const [uuid, changeUUID] = React.useState(uuidv4())
 
   const isDraft = !props.autoSave
 
   const defaultNote = {
+    uuid,
     tags: [],
     title: '',
     colour: 'default',
@@ -44,7 +54,15 @@ const Note = (props = noteInterface, { t: translate }) => {
         props.changeContent({ uuid, content: event.target.value, isDraft })
       }
       onClose={() => props.deleteNote({ uuid }) && props.history.push('/')}
-      onSaveAndClose={() => props.publishNote({ uuid }) && props.history.push('/')}
+      onSaveAndClose={() =>
+        onSaveAndClose({
+          saveAndCreateNew: props.saveAndCreateNew,
+          changeUUID,
+          publishNote: props.publishNote,
+          history: props.history,
+          uuid,
+        })
+      }
       onSettings={() => props.history.push('/settings')}
       translate={translate}
       onInfo={() => props.history.push('/shortcuts')}
@@ -61,6 +79,7 @@ Note.contextTypes = {
 
 const mapStateToProps = ({ notes = noteInterface, settings = settingsInterface } = {}) => ({
   autoSave: settings.autoSave,
+  saveAndCreateNew: settings.saveAndCreateNew,
   notes: get(notes, 'list', []),
 })
 

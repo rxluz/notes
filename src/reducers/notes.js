@@ -1,13 +1,14 @@
 import { get, isEmpty } from 'lodash'
 import { setSelector } from 'Common/utils/state.utils'
 
-const defaultNote = {
+const defaultNote = () => ({
   content: '',
   title: '',
   isStarred: false,
   isDraft: true,
   tags: [],
-}
+})
+
 const updateOrAddByUUID = (list, note) => ({
   ...list,
   [note.uuid]: note,
@@ -35,8 +36,8 @@ const createNoteTag = (state, action) => ({
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
+      ...get(state.list, action.value.uuid, defaultNote()),
+      uuid: action.value.uuid,
       isDraft: action.value.isDraft,
       tags: addTag(get(state.list, `${action.value.uuid}.tags`, []), action.value.tag),
     },
@@ -48,8 +49,8 @@ const removeNoteTag = (state, action) => ({
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
+      ...get(state.list, action.value.uuid, defaultNote()),
+      uuid: action.value.uuid,
       isDraft: action.value.isDraft,
       tags: removeTag(get(state.list, `${action.value.uuid}.tags`, []), action.value.tag),
     },
@@ -61,8 +62,8 @@ const clearNote = (state, action) => ({
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
+      ...get(state.list, action.value.uuid, defaultNote()),
+      uuid: action.value.uuid,
       title: '',
       isDraft: action.value.isDraft,
       content: '',
@@ -84,26 +85,28 @@ const deleteNote = (state, action) => ({
   },
 })
 
-const updateNoteTitle = (state, action) => ({
-  ...state,
-  list: {
-    ...state.list,
-    [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
-      title: action.value.title,
-      isDraft: action.value.isDraft,
+const updateNoteTitle = (state, action) => {
+  return {
+    ...state,
+    list: {
+      ...state.list,
+      [action.value.uuid]: {
+        ...get(state.list, action.value.uuid, defaultNote()),
+        uuid: action.value.uuid,
+        title: action.value.title,
+        isDraft: action.value.isDraft,
+      },
     },
-  },
-})
+  }
+}
 
 const updateNoteContent = (state, action) => ({
   ...state,
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
+      ...get(state.list, action.value.uuid, defaultNote()),
+      uuid: action.value.uuid,
       content: action.value.content,
       isDraft: action.value.isDraft,
     },
@@ -115,8 +118,8 @@ const updateNoteColour = (state, action) => ({
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
+      ...get(state.list, action.value.uuid, defaultNote()),
+      uuid: action.value.uuid,
       colour: action.value.colour,
       isDraft: action.value.isDraft,
     },
@@ -128,8 +131,8 @@ const toggleStar = (state, action) => ({
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
-      uuid: [action.value.uuid],
+      ...get(state.list, action.value.uuid, defaultNote()),
+      uuid: action.value.uuid,
       isStarred: !get(state.list, action.value.uuid, false).isStarred,
       isDraft: action.value.isDraft,
     },
@@ -141,7 +144,7 @@ const publishNote = (state, action) => ({
   list: {
     ...state.list,
     [action.value.uuid]: {
-      ...get(state.list, action.value.uuid, defaultNote),
+      ...get(state.list, action.value.uuid, defaultNote()),
       isDraft: false,
     },
   },
