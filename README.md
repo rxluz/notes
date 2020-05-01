@@ -11,7 +11,7 @@ Heavily inspired from [Egghead.io - How to Write an Open Source JavaScript Libra
 [Mockups](https://github.com/rxluz/notes/blob/master/.resources/app_prototype.pdf) <br />
 [List of presentational components](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
 
-## Main features and tools
+## Main tools
 
 | Item                   | Description                                                                                                                                                                                                                     |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,6 +29,24 @@ Heavily inspired from [Egghead.io - How to Write an Open Source JavaScript Libra
 | Multi-language support | Allow to add new languages using PoEdit files                                                                                                                                                                                   |
 | Atomic commits         | Commits following the angular commit message conventions                                                                                                                                                                        |
 | Prettier               | Automatic code formatting                                                                                                                                                                                                       |
+
+## Main features
+
+| Feature             | Description                                                                                                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| JS disabled warning | Display a message and an illustration to the user when the JS isn't enabled                                              |
+| No notes state      | Display an empty state with a message and an illustration to the user when no notes is added                             |
+| Dark mode           | Allow the user to use the dark mode and detect automatically when the browser is in dark mode and apply it to the layout |
+| Search page         | Allow the user search by note name, content or tags                                                                      |
+| No results state    | Display an empty state with a message and an illustration to the user when the search has no results                     |
+| Settings page       | Allow the user to define dark mode, auto save and add a new note by default                                              |
+| Shortcuts page      | Display all the shortcuts available                                                                                      |
+| Add / remove tags   | Allow the user to connect a note with tags                                                                               |
+| Add / remove star   | Allow to create a starred note that will be displayed before the other notes                                             |
+| Add color           | Allow the user to add a note                                                                                             |
+| Share note          | In mobile mode allow the user to share the note using the share api                                                      |
+| Remove note         | Allow the user to delete a note                                                                                          |
+|  |
 
 ## Shortcuts
 
@@ -126,13 +144,20 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 - [x] On delete return to main screen OK
 - [x] Fix the remove in edit mode OK
 - [x] On close in add mode delete the note in add mode OK
-- [x] Dont display the drafts in the main list OK
+- [x] Don't display the drafts in the main list OK
 - [x] Display the pinned notes first OK
 - [x] Don't display shortcuts in mobile mode OK
 - [x] Remove fist clear button in mobile mode OK
 - [x] Improve the mobile padding and alignment OK
 - [x] Change the float button colour OK
 - [x] Make the shortcuts work OK
+- [x] Attach the docs created
+- [x] Check if possible embed images
+- [x] Code the shortcuts
+- [x] Handle with invalid notes in edit mode
+- [x] create a feature table in readme
+- [ ] rename interfaces to pages
+- [ ] The previous tags are displaying in new notes
 - [ ] Review the BEM classes names [Know more](https://seesparkbox.com/foundry/bem_by_example)
 - [ ] Improve the tests quality
 - [ ] Remove useless css classes
@@ -149,22 +174,16 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 - [ ] Stop using array key as react key elements
 - [ ] Chip chipdisplay class name
 - [ ] rename the no-javascript tag
-- [ ] create a feature table in readme
 - [ ] create tests in stateless interfaces
 - [ ] replace the translation system to a new one that don't use the old context api
-- [ ] rename interfaces to pages
 - [ ] Organize the imports order (absolute imports first)
 - [ ] Start using proptypes in interfaces
 - [ ] Improve the search results (better string filter
 - [ ] Highlight the search terms
-- [ ] Publish the shortcuts
 - [ ] Check texts in small screens
 - [ ] Make the settings add new note by default works
 - [ ] Create a portuguese version and a switcher?
-- [ ] Attach the docs created
 - [ ] Add the search signal when the search is active
-- [ ] Check if possible embebed images
 - [ ] Verify what happens when the user add many tags
-- [ ] The previous tags are displaying in new notes
 - [ ] Create note undo
-- [ ] Handle with invalid notes in edit mode
+- [ ] Fix the dark mode switch
