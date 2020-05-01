@@ -1,13 +1,9 @@
-const settings = (state = [], action) => {
-  switch (action.type) {
-    default:
-      return {
-        language: 'browser',
-        darkMode: 'browser',
-        autosave: true,
-        saveAndCreateNew: true,
-      }
-  }
-}
+import { setSelector } from 'Common/utils/state.utils'
 
-export default settings
+const list = (state) => ({
+  SETTINGS_TOGGLE_AUTO_SAVE: () => ({ ...state, autoSave: !state.autoSave }),
+  SETTINGS_TOGGLE_DARK_MODE: () => ({ ...state, darkMode: !state.darkMode }),
+  SETTINGS_TOGGLE_SAVE_CREATE_NEW: () => ({ ...state, saveAndCreateNew: !state.saveAndCreateNew }),
+})
+
+export default setSelector(list)
