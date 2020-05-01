@@ -7,9 +7,9 @@ Heavily inspired from [Egghead.io - How to Write an Open Source JavaScript Libra
 ## Project resources
 
 [List of presentational components](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
-[Ideas](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
-[Inspiration board](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
-[Mockups](https://rxluz.github.io/notes/storybook/?path=/story/card--card) <br />
+[Ideas](https://github.com/rxluz/notes/blob/master/.resources/app_ideas.pdf) <br />
+[Inspiration board](https://github.com/rxluz/notes/blob/master/.resources/app_inspiration_board.pdf) <br />
+[Mockups](https://github.com/rxluz/notes/blob/master/.resources/app_prototype.pdf) <br />
 
 ## Main features and tools
 
