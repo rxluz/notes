@@ -5,10 +5,11 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
-  cursor: pointer;
+
+  overflow: hidden;
 
   display: inline-block;
-  margin-right: 20px;
+
   padding: 2px 15px 0px 15px;
   font-size: 10px;
   height: 180px;
@@ -36,11 +37,15 @@
   }
   &__title {
     font-size: 30px;
+    overflow: hidden;
+    width: 100%;
   }
 
   &__content {
     font-size: 18px;
     margin-inline-start: 0px;
+    overflow: hidden;
+    width: 100%;
   }
 
   &__state {
@@ -87,11 +92,20 @@
 .light-mode {
   .card {
     border-color: $light-box-border-color;
+
     &__icons {
       svg {
         color: $light-icon-color;
       }
       background-color: $light-bg;
     }
+  }
+}
+
+.desktop {
+  .card {
+    cursor: pointer;
+    margin-right: 20px;
+    width: 27%;
   }
 }

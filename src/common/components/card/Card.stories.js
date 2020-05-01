@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import moment from 'moment'
-import { action } from '@storybook/addon-actions'
+
 import { Light, Dark } from 'Common/utils/storybookMode'
 
 import 'react-tippy/dist/tippy.css'
@@ -270,7 +270,6 @@ export const cardDarkMode = () => (
       title="Hello world"
       dueDate={moment().add(1, 'day').toISOString()}
       content="hey ola que tal"
-      dueDate={moment().add(1, 'day').toISOString()}
     />
   </Dark>
 )
