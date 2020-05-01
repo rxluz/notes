@@ -1,0 +1,101 @@
+@import 'Common/utils/colours';
+
+.search-interface {
+  &__header {
+    &-close {
+      float: right;
+      height: 50px;
+      width: 50px;
+
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      width: 37px;
+      height: 50px;
+    }
+  }
+
+  &__main {
+    margin-top: 40px;
+    &-input {
+      width: 100%;
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 31px;
+    z-index: 10;
+    width: 100%;
+
+    &-float {
+      position: absolute;
+      right: 60px;
+      bottom: 18px;
+
+      i {
+        background: #f2c15e;
+
+        svg {
+          position: absolute;
+          left: 13px;
+          top: 13px;
+        }
+      }
+    }
+  }
+}
+
+.desktop {
+  .search-interface {
+    padding: 30px;
+
+    &__footer {
+      bottom: 31px;
+
+      &-float {
+        right: 60px;
+        bottom: 18px;
+      }
+    }
+  }
+}
+
+.mobile-tablet {
+  .search-interface {
+    padding: 10px;
+
+    &__footer {
+      bottom: 20px;
+
+      &-float {
+        right: 20px;
+        bottom: 18px;
+      }
+    }
+  }
+}
+
+.light-mode {
+  .search-interface {
+    &__header {
+      &-close {
+        svg {
+          color: $dark-bg !important;
+        }
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .search-interface {
+    &__header {
+      &-close {
+        svg {
+          color: $light-bg !important;
+        }
+      }
+    }
+  }
+}
