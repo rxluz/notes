@@ -118,53 +118,53 @@ Illustrations by [Ivan Haidutski](https://dribbble.com/Ivan_Haidutski).<br />
 
 ## Known technical debts
 
-- Review the BEM classes names [Know more](https://seesparkbox.com/foundry/bem_by_example)
-- Improve the tests quality
-- Remove useless css classes
-- Allow custom icons in IconTextSwitch
-- Improve iconTextSwitch accessibility
-- Improve colourSwitch accessibility
-- Fix wording errors
-- Fix broken tests
-- Remove double components names in sass
-- Improve HTML semantic
-- [Stop using import in SASS](https://github.com/sass/sass/blob/master/accepted/module-system.md#timeline)
-- Create unit tests in utils functions
-- Use the empty function util
-- Stop using array key as react key elements
-- Chip chipdisplay class name
-- rename the no-javascript tag
-- create a feature table in readme
-- create tests in stateless interfaces
-- replace the translation system to a new one that don't use the old context api
-- rename interfaces to pages
-- Organize the imports order (absolute imports first)
-- Start using proptypes in interfaces
-- Improve the search results (better string filter
-- Highlight the search terms
-- Publish the shortcuts
-- Publish to github
-- Fix storybook errors OK
-- Check layout mobile OK
-- Check texts in small screens
-- Fix the dark mode checkbox
-- Return 404 in edit mode
-- On delete return to main screen OK
-- Fix the remove in edit mode OK
-- On close in add mode delete the note in add mode OK
-- Dont display the drafts in the main list OK
-- Display the pinned notes first OK
-- Don't display shortcuts in mobile mode OK
-- Remove fist clear button in mobile mode OK
-- Improve the mobile padding and alignment OK
-- Change the float button colour OK
-- Make the shortcuts work!
-- Make the settings add new note by default works
-- Create a portuguese version and a switcher?
-- Attach the docs created
-- Add the search signal when the search is active
-- Check if possible embebed images
-- Verify what happens when the user add many tags
-- The previous tags are displaying in new notes
-- Create note undo?
-- Handle with invalid notes in edit mode
+- [x] Publish to github OK
+- [x] Fix storybook errors OK
+- [x] Check layout mobile OK
+- [x] Fix the dark mode checkbox OK
+- [x] Return 404 in edit mode OK
+- [x] On delete return to main screen OK
+- [x] Fix the remove in edit mode OK
+- [x] On close in add mode delete the note in add mode OK
+- [x] Dont display the drafts in the main list OK
+- [x] Display the pinned notes first OK
+- [x] Don't display shortcuts in mobile mode OK
+- [x] Remove fist clear button in mobile mode OK
+- [x] Improve the mobile padding and alignment OK
+- [x] Change the float button colour OK
+- [x] Make the shortcuts work OK
+- [ ] Review the BEM classes names [Know more](https://seesparkbox.com/foundry/bem_by_example)
+- [ ] Improve the tests quality
+- [ ] Remove useless css classes
+- [ ] Allow custom icons in IconTextSwitch
+- [ ] Improve iconTextSwitch accessibility
+- [ ] Improve colourSwitch accessibility
+- [ ] Fix wording errors
+- [ ] Fix broken tests
+- [ ] Remove double components names in sass
+- [ ] Improve HTML semantic
+- [ ] [Stop using import in SASS](https://github.com/sass/sass/blob/master/accepted/module-system.md#timeline)
+- [ ] Create unit tests in utils functions
+- [ ] Use the empty function util
+- [ ] Stop using array key as react key elements
+- [ ] Chip chipdisplay class name
+- [ ] rename the no-javascript tag
+- [ ] create a feature table in readme
+- [ ] create tests in stateless interfaces
+- [ ] replace the translation system to a new one that don't use the old context api
+- [ ] rename interfaces to pages
+- [ ] Organize the imports order (absolute imports first)
+- [ ] Start using proptypes in interfaces
+- [ ] Improve the search results (better string filter
+- [ ] Highlight the search terms
+- [ ] Publish the shortcuts
+- [ ] Check texts in small screens
+- [ ] Make the settings add new note by default works
+- [ ] Create a portuguese version and a switcher?
+- [ ] Attach the docs created
+- [ ] Add the search signal when the search is active
+- [ ] Check if possible embebed images
+- [ ] Verify what happens when the user add many tags
+- [ ] The previous tags are displaying in new notes
+- [ ] Create note undo
+- [ ] Handle with invalid notes in edit mode
