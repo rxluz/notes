@@ -1,34 +1,19 @@
 import React from 'react'
-import ShortcutsInterface from './ShortcutsInterface'
+import * as PropTypes from 'prop-types'
 
-const action = (description) => (func) => console.log(func, description)
+import { withRouter } from 'react-router'
 
-const list = ['hello', 'world', 'hey', 'haha']
-const TAGS = [...list, ...list, ...list]
-const OPTIONS = []
-OPTIONS.push({ value: 'TODAY', text: 'Today' })
-OPTIONS.push({ value: 'TOMORROW', text: 'Tomorrow' })
-OPTIONS.push({ value: 'TWO_DAYS', text: 'Two days' })
-OPTIONS.push({ value: 'NEXT_WEEK', text: 'Next week' })
+import ShortcutsPage from './ShortcutsPage'
 
-const Edit = () => (
-  <ShortcutsInterface
-    uuid="1234"
-    scheduleOptions={OPTIONS}
-    onRemoveTag={action('removeTags')}
-    onAddTag={action('AddTags')}
-    onPin={action('Pin')}
-    isScheduled={true}
-    isPinned={true}
-    onChangeColour={action('ChangeColour')}
-    onDelete={action('onDelete')}
-    onInfo={action('onInfo')}
-    onSaveAndClose={action('onSaveAndClose')}
-    onSave={action('onSave')}
-    onSchedule={action('onSchedule')}
-    colour="pink"
-    tags={TAGS}
-  />
+const Shortcuts = (props, { t: translate }) => (
+  <ShortcutsPage onClose={() => props.history.goBack()} translate={translate} />
 )
 
-export default Edit
+Shortcuts.contextTypes = {
+  t: PropTypes.func,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }),
+}
+
+export default withRouter(Shortcuts)

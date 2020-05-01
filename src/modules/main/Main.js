@@ -5,13 +5,16 @@ import 'react-tippy/dist/tippy.css'
 
 import RoutesList from 'Common/routes/RoutesList'
 import BodyClasses from 'Modules/main/BodyClasses'
+import Shortcuts from 'Modules/main/Shortcuts'
 
 const Main = (_props, context) => {
   return (
     <BodyClasses>
-      <div className="App">
-        <RoutesList />
-      </div>
+      <Shortcuts>
+        <div className="App">
+          <RoutesList />
+        </div>
+      </Shortcuts>
     </BodyClasses>
   )
 }

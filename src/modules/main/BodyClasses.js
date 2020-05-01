@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 
-import { isBrowserInDarkMode, isMobileOrTablet } from 'Common/utils/browser.utils'
+import { isDarkMode, isMobileOrTablet } from 'Common/utils/browser.utils'
 
 import { detect } from 'detect-browser'
 
@@ -17,9 +17,11 @@ const addBrowserClasses = () => {
 }
 
 const addDarkModeClasses = ({ darkMode = 'browser' } = {}) => {
-  const isDarkMode = darkMode === 'enabled' || isBrowserInDarkMode()
+  const isDarkModeCheck = darkMode === 'browser' ? isDarkMode() : darkMode
 
-  body.classList.add(`${isDarkMode ? 'dark' : 'light'}-mode`)
+  body.classList.remove(`dark-mode`)
+  body.classList.remove(`light-mode`)
+  body.classList.add(`${isDarkModeCheck ? 'dark' : 'light'}-mode`)
 }
 
 const addMobileDesktopClasses = () => {
