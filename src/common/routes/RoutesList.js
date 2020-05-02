@@ -2,14 +2,14 @@ import React from 'react'
 
 import { Switch, Route } from 'react-router-dom'
 
-import NotFound from 'Modules/main/NotFound'
-import Add from 'Modules/note/Add'
-import Edit from 'Modules/note/Edit'
-import Notes from 'Modules/notes/Notes'
-import SearchResults from 'Modules/search/SearchResults'
-import Search from 'Modules/search/Search'
-import Settings from 'Modules/settings/Settings'
-import Shortcuts from 'Modules/shortcuts/Shortcuts'
+import NotFound from 'modules/main/NotFound'
+import Add from 'modules/note/Add'
+import Edit from 'modules/note/Edit'
+import Notes from 'modules/notes/Notes'
+import SearchResults from 'modules/search/SearchResults'
+import Search from 'modules/search/Search'
+import Settings from 'modules/settings/Settings'
+import Shortcuts from 'modules/shortcuts/Shortcuts'
 
 const RoutesList = () => (
   <Switch>

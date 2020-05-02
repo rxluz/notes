@@ -1,4 +1,10 @@
-import { setSelector } from 'Common/utils/state.utils'
+import { setSelector } from 'common/utils/state.utils'
+
+const defaultSettings = () => ({
+  darkMode: 'browser',
+  saveAndCreateNew: false,
+  autoSave: false,
+})
 
 const list = (state) => ({
   SETTINGS_TOGGLE_AUTO_SAVE: () => ({ ...state, autoSave: !state.autoSave }),
@@ -6,4 +12,4 @@ const list = (state) => ({
   SETTINGS_TOGGLE_SAVE_CREATE_NEW: () => ({ ...state, saveAndCreateNew: !state.saveAndCreateNew }),
 })
 
-export default setSelector(list)
+export default setSelector(list, defaultSettings())

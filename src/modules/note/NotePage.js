@@ -4,13 +4,13 @@ import { FiX, FiStar, FiTrash, FiInfo, FiCheck, FiSettings, FiShare } from 'reac
 import { isEmpty } from 'lodash'
 import { hotkeys } from 'react-keyboard-shortcuts'
 
-import { isMobileOrTablet, isShareAvailable, share } from 'Common/utils/browser.utils'
+import { isMobileOrTablet, isShareAvailable, share } from 'common/utils/browser.utils'
 
-import TransparentInput from 'Common/components/transparentInput'
-import Icon from 'Common/components/icon'
-import ChipsDisplay from 'Common/components/chipsDisplay'
-import Chip from 'Common/components/chip'
-import ColourSwitch from 'Common/components/colourSwitch'
+import TransparentInput from 'common/components/transparentInput'
+import Icon from 'common/components/icon'
+import ChipsDisplay from 'common/components/chipsDisplay'
+import Chip from 'common/components/chip'
+import ColourSwitch from 'common/components/colourSwitch'
 
 import { noteInterface } from './note.interface'
 

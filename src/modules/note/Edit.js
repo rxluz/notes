@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types'
 import NotePage from './NotePage'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { settingsInterface } from 'Modules/settings/settings.interface'
+import { settingsInterface } from 'modules/settings/settings.interface'
 
 import * as noteActions from './note.actions'
 import { noteInterface } from './note.interface'
@@ -14,14 +14,11 @@ import { useParams } from 'react-router-dom'
 const Note = (props = noteInterface, { t: translate }) => {
   let { uuid } = useParams()
 
-  const isDraft = false
-
   const defaultNote = {
     tags: [],
     title: '',
     colour: 'default',
     content: '',
-    isDraft: !props.autoSave,
     isStarred: false,
   }
 
@@ -36,18 +33,20 @@ const Note = (props = noteInterface, { t: translate }) => {
   return (
     <NotePage
       isPinned={note.isStarred || false}
-      onPin={() => props.toggleStar({ uuid, isDraft })}
+      onPin={() => props.toggleStar({ uuid, isDraft: false })}
       tags={note.tags || []}
       colour={note.colour || 'default'}
-      onAddTag={(event) => props.addTag({ uuid, tag: event.target.value, isDraft })}
-      onChangeColour={({ colour }) => props.changeColour({ uuid, colour, isDraft })}
-      onRemoveTag={(tag) => props.removeTag({ uuid, tag })}
+      onAddTag={(event) => props.addTag({ uuid, tag: event.target.value, isDraft: false })}
+      onChangeColour={({ colour }) => props.changeColour({ uuid, colour, isDraft: false })}
+      onRemoveTag={(tag) => props.removeTag({ uuid, tag, isDraft: false })}
       title={note.title}
       content={note.content}
       onDelete={() => props.deleteNote({ uuid }) && props.history.push('/')}
-      onChangeTitle={(event) => props.changeTitle({ uuid, title: event.target.value, isDraft })}
+      onChangeTitle={(event) =>
+        props.changeTitle({ uuid, title: event.target.value, isDraft: false })
+      }
       onChangeContent={(event) =>
-        props.changeContent({ uuid, content: event.target.value, isDraft })
+        props.changeContent({ uuid, content: event.target.value, isDraft: false })
       }
       onClose={() => props.history.push('/')}
       onSaveAndClose={() => props.history.push('/')}

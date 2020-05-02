@@ -1,5 +1,5 @@
 import { get, isEmpty } from 'lodash'
-import { setSelector } from 'Common/utils/state.utils'
+import { setSelector } from 'common/utils/state.utils'
 
 const defaultNote = () => ({
   content: '',

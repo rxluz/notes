@@ -1,13 +1,13 @@
 import React from 'react'
 import moment from 'moment'
 import { FiStar, FiClock } from 'react-icons/fi'
-import { Tooltip } from 'react-tippy'
-import Chip from 'Common/components/chip'
-import ChipsDisplay from 'Common/components/chipsDisplay'
-import COLOURS from 'Common/utils/colours.constants'
+import Tooltip from 'common/components/tooltip'
+import Chip from 'common/components/chip'
+import ChipsDisplay from 'common/components/chipsDisplay'
+import COLOURS from 'common/utils/colours.constants'
 import './Card.scss'
-import { emptyFunc } from 'Common/utils/general.utils'
-import { isMobileOrTablet } from 'Common/utils/browser.utils'
+import { emptyFunc } from 'common/utils/general.utils'
+import { isMobileOrTablet } from 'common/utils/browser.utils'
 
 const getFixedIcons = ({ isStarred, dueDate, translate }) => {
   const hasDueDate = !!dueDate

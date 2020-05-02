@@ -1,4 +1,4 @@
-import { emptyFunc } from 'Common/utils/general.utils'
+import { emptyFunc } from 'common/utils/general.utils'
 
 export const noteInterface = {
   uuid: '',

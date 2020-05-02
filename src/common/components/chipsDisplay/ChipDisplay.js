@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { Tooltip } from 'react-tippy'
+import Tooltip from 'common/components/tooltip'
 
 import './ChipDisplay.scss'
 

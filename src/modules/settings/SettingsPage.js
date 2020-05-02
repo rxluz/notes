@@ -3,9 +3,7 @@ import { FiX } from 'react-icons/fi'
 
 import { settingsPageInterface } from './settings.interface'
 
-import ToggleWithDescription from 'Common/components/toggleWithDescription'
-
-import Icon from 'Common/components/icon'
+import ToggleWithDescription from 'common/components/toggleWithDescription'
 
 import './SettingsPage.scss'
 

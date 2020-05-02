@@ -1,5 +1,5 @@
 import React from 'react'
-import Notes from 'Modules/notes/Notes'
+import Notes from 'modules/notes/Notes'
 import { useParams } from 'react-router-dom'
 
 const SearchResults = () => {

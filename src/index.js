@@ -6,9 +6,9 @@ import I18n from 'redux-i18n'
 import detectBrowserLanguage from 'detect-browser-language'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import { translations } from 'Common/locales/translations'
-import configureStore from 'Reducers/configureStore'
-import Main from 'Modules/main/Main'
+import { translations } from 'common/locales/translations'
+import configureStore from 'reducers/configureStore'
+import Main from 'modules/main/Main'
 
 import './index.css'
 import * as serviceWorker from './serviceWorker'

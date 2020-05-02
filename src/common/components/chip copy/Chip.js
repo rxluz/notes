@@ -2,7 +2,7 @@ import React from 'react'
 import { FiX } from 'react-icons/fi'
 import Tooltip from 'common/components/tooltip'
 
-import { isMobileOrTablet } from 'common/utils/browser.utils'
+import { isMobileOrTablet } from './node_modules/common/utils/browser.utils'
 
 import './Chip.scss'
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { FiX, FiCheck } from 'react-icons/fi'
-import { isMobileOrTablet } from 'Common/utils/browser.utils'
-import TransparentInput from 'Common/components/transparentInput'
-import Icon from 'Common/components/icon'
+import { isMobileOrTablet } from 'common/utils/browser.utils'
+import TransparentInput from 'common/components/transparentInput'
+import Icon from 'common/components/icon'
 
 import { searchPageInterface } from './search.interface'
 

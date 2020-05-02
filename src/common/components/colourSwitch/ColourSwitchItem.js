@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip } from 'react-tippy'
+import Tooltip from 'common/components/tooltip'
 
 const ColourSwitchItem = ({ onClick, addClass = '', tip = false, colour }) => {
   const content = (

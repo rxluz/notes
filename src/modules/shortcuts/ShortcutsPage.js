@@ -1,10 +1,10 @@
 import React from 'react'
 import { FiX } from 'react-icons/fi'
-import { emptyFunc } from 'Common/utils/general.utils'
+import { emptyFunc } from 'common/utils/general.utils'
 
-import KeyShortcutInfo from 'Common/components/keyShortcutInfo'
+import KeyShortcutInfo from 'common/components/keyShortcutInfo'
 
-import Icon from 'Common/components/icon'
+import Icon from 'common/components/icon'
 
 import './ShortcutsPage.scss'
 

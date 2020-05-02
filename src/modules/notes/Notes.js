@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 
-import { isTermInsideItems } from 'Common/utils/general.utils'
+import { isTermInsideItems } from 'common/utils/general.utils'
 
 import { notesInterface } from './notes.interface'
 import NotesInterface from './NotesPage'

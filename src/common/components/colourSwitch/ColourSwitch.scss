@@ -1,4 +1,4 @@
-@import 'Common/utils/colours';
+@import 'common/utils/colours';
 
 .colour-switch {
   position: relative;
@@ -7,10 +7,10 @@
     position: relative;
     margin-top: 10px;
     border-style: solid;
-
-    border-radius: 50%;
     width: 15px;
     height: 15px;
+
+    border-radius: 50%;
     display: block;
     font-size: 10px;
     cursor: pointer;
@@ -23,6 +23,14 @@
     width: 23px;
 
     text-align: center;
+  }
+}
+
+.mobile-tablet {
+  .colour-switch {
+    &__items {
+      zoom: 2;
+    }
   }
 }
 

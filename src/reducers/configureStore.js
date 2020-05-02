@@ -3,8 +3,8 @@ import thunkMiddleware from 'redux-thunk'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-import monitorReducersEnhancer from 'Enhancers/monitorReducer'
-import loggerMiddleware from 'Middleware/logger'
+import monitorReducersEnhancer from 'enhancers/monitorReducer'
+import loggerMiddleware from 'middleware/logger'
 import rootReducer from '.'
 
 const persistConfig = {

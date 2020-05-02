@@ -4,7 +4,7 @@ import moment from 'moment'
 import { v4 as uuidv4 } from 'uuid'
 
 import { action } from '@storybook/addon-actions'
-import { Light, Dark } from 'Common/utils/storybookMode'
+import { Light, Dark } from 'common/utils/storybookMode'
 
 import 'react-tippy/dist/tippy.css'
 

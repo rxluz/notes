@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import moment from 'moment'
 
-import { Light, Dark } from 'Common/utils/storybookMode'
+import { Light, Dark } from 'common/utils/storybookMode'
 
 import 'react-tippy/dist/tippy.css'
 

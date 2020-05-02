@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Tooltip } from 'react-tippy'
+import Tooltip from 'common/components/tooltip'
 
 import './Icon.scss'
 
