@@ -3,7 +3,7 @@ import { Tooltip } from 'react-tippy'
 
 import { isMobileOrTablet } from 'common/utils/browser.utils'
 
-import './Tooltip.scss'
+import 'react-tippy/dist/tippy.css'
 
 const TooltipWrapper = ({
   children,

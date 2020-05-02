@@ -18,6 +18,7 @@ const displayNotes = ({ notes, onOpenNote }) =>
       isStarred={note.isStarred}
       colour={note.colour}
       title={note.title}
+      width={isMobileOrTablet() ? 'calc(100% - 60px)' : '27%'}
       dueDate={note.dueDate}
       content={note.content}
       tags={note.tags}

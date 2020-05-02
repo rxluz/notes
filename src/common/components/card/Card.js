@@ -67,7 +67,7 @@ const getTagsList = ({ tags, width, translate }) => {
       <ChipsDisplay
         addClass="card__tags"
         showMore={false}
-        width={`calc(${width} - 40px)`}
+        width={`calc(100% - 40px)`}
         translate={translate}
       >
         {buildTags({ tags, translate })}
@@ -101,7 +101,7 @@ const Card = ({
       onClick={onClick}
       className={`card card__state--${isHover ? 'active' : 'default'}`}
       onMouseEnter={() => setIsHover(true)}
-      style={{ paddingBottom: isColourValid && '10px' }}
+      style={{ width, paddingBottom: isColourValid && '10px' }}
       onMouseLeave={() => setIsHover(false)}
     >
       {hasTitle && <dt className="card__title">{title}</dt>}

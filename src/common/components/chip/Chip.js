@@ -26,9 +26,19 @@ const Chip = ({
 } = {}) => {
   const [isHover, setIsHover] = React.useState(false)
 
+  const displayRemovable = () => {
+    if (isMobileOrTablet()) {
+      return isRemovable
+    }
+
+    return isRemovable && isHover
+  }
+
   return (
     <div
-      className={`chip chip__state--${isHover || isMobileOrTablet() ? 'active' : 'default'}`}
+      className={`chip chip__state--${isHover ? 'active' : 'default'} chip__state--${
+        displayRemovable() ? 'removable' : 'unremovable'
+      } `}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >

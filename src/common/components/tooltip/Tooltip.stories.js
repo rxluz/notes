@@ -1,9 +1,10 @@
-import React from 'common/components/tooltip/node_modules/react'
+import React from 'react'
 import Tooltip from './Tooltip'
-import { action } from 'common/components/tooltip/node_modules/@storybook/addon-actions'
-import { Light, Dark } from 'common/components/tooltip/node_modules/common/utils/storybookMode'
+import { action } from '@storybook/addon-actions'
 
-import 'common/components/tooltip/node_modules/react-tippy/dist/tippy.css'
+import { Light, Dark } from 'common/utils/storybookMode'
+
+import 'react-tippy/dist/tippy.css'
 
 export default { title: 'Tooltip' }
 
