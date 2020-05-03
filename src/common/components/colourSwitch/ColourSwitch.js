@@ -1,5 +1,5 @@
 import React from 'react'
-import COLOURS from 'Common/utils/colours.constants'
+import COLOURS from 'common/utils/colours.constants'
 
 import ColourSwitchItem from './ColourSwitchItem'
 

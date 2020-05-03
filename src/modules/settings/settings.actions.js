@@ -1,4 +1,4 @@
-import { action } from 'Common/utils/state.utils'
+import { action } from 'common/utils/state.utils'
 
 export const setAutoSaveToggle = action('SETTINGS_TOGGLE_AUTO_SAVE')
 export const setDarkModeToggle = action('SETTINGS_TOGGLE_DARK_MODE')

@@ -1,4 +1,4 @@
-@import 'Common/utils/colours';
+@import 'common/utils/colours';
 
 .card {
   position: relative;
@@ -113,6 +113,5 @@
   .card {
     cursor: pointer;
     margin-right: 20px;
-    width: 27%;
   }
 }

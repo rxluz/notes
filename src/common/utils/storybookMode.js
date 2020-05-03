@@ -1,7 +1,7 @@
 import React from 'react'
 import './storybookMode.scss'
 
-import 'Modules/main/Main.scss'
+import 'modules/main/Main.scss'
 
 const StorybookMode = (props) => <div className={`${props.mode}-mode`}>{props.children}</div>
 

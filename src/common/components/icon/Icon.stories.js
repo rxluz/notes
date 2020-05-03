@@ -2,7 +2,7 @@ import React from 'react'
 import { FiX, FiAperture } from 'react-icons/fi'
 
 import Icon from './Icon'
-import { Light, Dark } from 'Common/utils/storybookMode'
+import { Light, Dark } from 'common/utils/storybookMode'
 
 import 'react-tippy/dist/tippy.css'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { isMac } from 'Common/utils/os.utils'
+import { isMac } from 'common/utils/os.utils'
 
 import './KeyShortcutInfo.scss'
 

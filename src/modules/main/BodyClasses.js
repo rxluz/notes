@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 
-import { isDarkMode, isMobileOrTablet } from 'Common/utils/browser.utils'
+import { isDarkMode, isMobileOrTablet } from 'common/utils/browser.utils'
 
 import { detect } from 'detect-browser'
 

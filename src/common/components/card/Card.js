@@ -1,13 +1,13 @@
 import React from 'react'
 import moment from 'moment'
 import { FiStar, FiClock } from 'react-icons/fi'
-import { Tooltip } from 'react-tippy'
-import Chip from 'Common/components/chip'
-import ChipsDisplay from 'Common/components/chipsDisplay'
-import COLOURS from 'Common/utils/colours.constants'
+import Tooltip from 'common/components/tooltip'
+import Chip from 'common/components/chip'
+import ChipsDisplay from 'common/components/chipsDisplay'
+import COLOURS from 'common/utils/colours.constants'
 import './Card.scss'
-import { emptyFunc } from 'Common/utils/general.utils'
-import { isMobileOrTablet } from 'Common/utils/browser.utils'
+import { emptyFunc } from 'common/utils/general.utils'
+import { isMobileOrTablet } from 'common/utils/browser.utils'
 
 const getFixedIcons = ({ isStarred, dueDate, translate }) => {
   const hasDueDate = !!dueDate
@@ -67,7 +67,7 @@ const getTagsList = ({ tags, width, translate }) => {
       <ChipsDisplay
         addClass="card__tags"
         showMore={false}
-        width={`calc(${width} - 40px)`}
+        width={`calc(100% - 40px)`}
         translate={translate}
       >
         {buildTags({ tags, translate })}
@@ -101,7 +101,7 @@ const Card = ({
       onClick={onClick}
       className={`card card__state--${isHover ? 'active' : 'default'}`}
       onMouseEnter={() => setIsHover(true)}
-      style={{ paddingBottom: isColourValid && '10px' }}
+      style={{ width, paddingBottom: isColourValid && '10px' }}
       onMouseLeave={() => setIsHover(false)}
     >
       {hasTitle && <dt className="card__title">{title}</dt>}

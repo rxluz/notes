@@ -1,7 +1,7 @@
 import React from 'react'
 import Chip from './Chip'
 import { action } from '@storybook/addon-actions'
-import { Light, Dark } from 'Common/utils/storybookMode'
+import { Light, Dark } from 'common/utils/storybookMode'
 
 import 'react-tippy/dist/tippy.css'
 

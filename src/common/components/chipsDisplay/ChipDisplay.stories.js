@@ -1,9 +1,9 @@
 import React from 'react'
 import ChipDisplay from './ChipDisplay'
-import Chip from 'Common/components/chip/Chip'
+import Chip from 'common/components/chip/Chip'
 import { action } from '@storybook/addon-actions'
 import 'react-tippy/dist/tippy.css'
-import { Light, Dark } from 'Common/utils/storybookMode'
+import { Light, Dark } from 'common/utils/storybookMode'
 
 export default { title: 'Chip Display' }
 

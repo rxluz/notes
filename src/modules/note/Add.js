@@ -5,7 +5,7 @@ import NotePage from './NotePage'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
-import { settingsInterface } from 'Modules/settings/settings.interface'
+import { settingsInterface } from 'modules/settings/settings.interface'
 
 import * as noteActions from './note.actions'
 import { noteInterface } from './note.interface'
@@ -53,7 +53,7 @@ const Note = (props = noteInterface, { t: translate }) => {
       colour={note.colour || 'default'}
       onAddTag={(event) => props.addTag({ uuid, tag: event.target.value, isDraft })}
       onChangeColour={({ colour }) => props.changeColour({ uuid, colour, isDraft })}
-      onRemoveTag={(tag) => props.removeTag({ uuid, tag })}
+      onRemoveTag={(tag) => props.removeTag({ uuid, tag, isDraft })}
       title={note.title}
       content={note.content}
       onDelete={() => props.deleteNote({ uuid })}

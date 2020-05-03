@@ -1,8 +1,8 @@
 import React from 'react'
 import { FiX } from 'react-icons/fi'
-import { Tooltip } from 'react-tippy'
+import Tooltip from 'common/components/tooltip'
 
-import { isMobileOrTablet } from 'Common/utils/browser.utils'
+import { isMobileOrTablet } from 'common/utils/browser.utils'
 
 import './Chip.scss'
 
@@ -26,9 +26,19 @@ const Chip = ({
 } = {}) => {
   const [isHover, setIsHover] = React.useState(false)
 
+  const displayRemovable = () => {
+    if (isMobileOrTablet()) {
+      return isRemovable
+    }
+
+    return isRemovable && isHover
+  }
+
   return (
     <div
-      className={`chip chip__state--${isHover || isMobileOrTablet() ? 'active' : 'default'}`}
+      className={`chip chip__state--${isHover ? 'active' : 'default'} chip__state--${
+        displayRemovable() ? 'removable' : 'unremovable'
+      } `}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >

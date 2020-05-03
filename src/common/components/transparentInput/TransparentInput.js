@@ -1,7 +1,7 @@
 import React from 'react'
 import { isEmpty } from 'lodash'
-import { emptyFunc } from 'Common/utils/general.utils'
-import { isMobileOrTablet } from 'Common/utils/browser.utils'
+import { emptyFunc } from 'common/utils/general.utils'
+import { isMobileOrTablet } from 'common/utils/browser.utils'
 
 import { FiCheck } from 'react-icons/fi'
 

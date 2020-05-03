@@ -31,10 +31,6 @@
       display: inline-block;
       width: 20px;
       margin-right: 20px;
-
-      :last-child {
-        float: right;
-      }
     }
 
     &-float {
@@ -74,6 +70,12 @@
 
     &__footer {
       bottom: 31px;
+
+      &-option {
+        :last-child {
+          float: right;
+        }
+      }
 
       &-float {
         right: 60px;

@@ -1,4 +1,4 @@
-import { action } from 'Common/utils/state.utils'
+import { action } from 'common/utils/state.utils'
 
 export const addNote = action('NOTE_CREATE')
 export const addTag = action('NOTE_TAG_ADD')

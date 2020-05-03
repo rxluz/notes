@@ -1,9 +1,9 @@
 import React from 'react'
 import { isEmpty } from 'lodash'
 import { FiSearch, FiSettings, FiPlus } from 'react-icons/fi'
-import { isMobileOrTablet } from 'Common/utils/browser.utils'
-import Card from 'Common/components/card'
-import Icon from 'Common/components/icon'
+import { isMobileOrTablet } from 'common/utils/browser.utils'
+import Card from 'common/components/card'
+import Icon from 'common/components/icon'
 import NoNotesImg from './no-notes.png'
 import NoResultsImg from './no-results.png'
 import { notesPageInterface } from './notes.interface'
@@ -18,6 +18,7 @@ const displayNotes = ({ notes, onOpenNote }) =>
       isStarred={note.isStarred}
       colour={note.colour}
       title={note.title}
+      width={isMobileOrTablet() ? 'calc(100% - 60px)' : '27%'}
       dueDate={note.dueDate}
       content={note.content}
       tags={note.tags}

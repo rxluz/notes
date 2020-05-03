@@ -1,4 +1,4 @@
-@import 'Common/utils/colours';
+@import 'common/utils/colours';
 
 .chip {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -20,6 +20,9 @@
   &__state {
     &--active {
       border-width: 2px;
+    }
+
+    &--removable {
       padding-right: 40px;
     }
   }

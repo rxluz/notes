@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { Tooltip } from 'react-tippy'
+import Tooltip from 'common/components/tooltip'
 
 import './ChipDisplay.scss'
 
@@ -10,8 +10,11 @@ const getTotalChildrenWidth = (componentID) => {
   let total = 0
 
   if (children.length > 0) {
-    for (const child in children) {
-      total = total + child.offsetWidth
+    for (const index in children) {
+      const child = children[index]
+      if (typeof child.offsetWidth === 'number') {
+        total = total + child.offsetWidth
+      }
     }
   }
 
@@ -29,19 +32,27 @@ const getTotalHidden = ({ showMore, componentID, setShowAllItems, translate }) =
   const totalChipDisplayWidth = document.getElementById(componentID).offsetWidth
   const children = document.getElementById(componentID).children
 
-  let totalItems = children.length
+  let totalItems = 0
   let totalVisibleItems = 0
 
   let total = 0
 
-  children.forEach((child) => {
-    const totalWithCurrentChild = total + child.offsetWidth
+  for (const index in children) {
+    const child = children[index]
 
-    if (totalChipDisplayWidth > totalWithCurrentChild) {
-      total = total + child.offsetWidth
-      totalVisibleItems++
+    if (typeof child.offsetWidth === 'number' && !child.className.includes('chipdisplay__info')) {
+      totalItems++
+      const totalWithCurrentChild = total + child.offsetWidth + 10
+
+      total = total + child.offsetWidth + 10
+
+      if (totalChipDisplayWidth > totalWithCurrentChild) {
+        totalVisibleItems++
+      }
     }
-  })
+  }
+
+  console.log({ totalChipDisplayWidth, total, totalItems, totalVisibleItems, children })
 
   const totalHiddenItems = totalItems - totalVisibleItems
 
