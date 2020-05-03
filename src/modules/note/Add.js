@@ -20,6 +20,14 @@ const onSaveAndClose = ({ saveAndCreateNew, changeUUID, publishNote, history, uu
   }
 }
 
+const onClose = ({ saveAndCreateNew, deleteNote, uuid, history }) => {
+  if (!saveAndCreateNew) {
+    deleteNote({ uuid })
+  }
+
+  history.push('/')
+}
+
 const Note = (props = noteInterface, { t: translate }) => {
   const [uuid, changeUUID] = React.useState(uuidv4())
 
@@ -53,7 +61,14 @@ const Note = (props = noteInterface, { t: translate }) => {
       onChangeContent={(event) =>
         props.changeContent({ uuid, content: event.target.value, isDraft })
       }
-      onClose={() => props.deleteNote({ uuid }) && props.history.push('/')}
+      onClose={() =>
+        onClose({
+          saveAndCreateNew: props.saveAndCreateNew,
+          deleteNote: props.deleteNote,
+          uuid,
+          history: props.history,
+        })
+      }
       onSaveAndClose={() =>
         onSaveAndClose({
           saveAndCreateNew: props.saveAndCreateNew,
